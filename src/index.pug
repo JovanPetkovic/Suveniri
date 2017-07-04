@@ -4,9 +4,17 @@ html
         meta(charset="utf-8")
         title Suveniri i Modeliranje
         link(rel="stylesheet", type="text/css", href="css/slider.css")
+        link(rel="stylesheet", type="text/css", href="css/presentation.css")
+        link(rel="stylesheet", type="text/css", href="css/navigation.css")
+        link(href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet")
     body
         .landing
             .slider
+                .nav
+                    a(href="#suveniri", target="_blank") suveniri
+                    a(href="#modeliranje", target="_blank") modeliranje
+                    a(href="#galerija", target="_blank") galerija
+                    a(href="#kontakt", target="_blank") kontakt
                 ul
                     li slide 1
                     li slide 2
@@ -14,42 +22,47 @@ html
                     li slide 4
                     li slide 5
             .godown
+                button(type="", )
         .navigation
+            button suveniri
+            button modeliranje
+            button kontakt
         .presentation#suveniri
-            img(src="images/", alt="")
+            .cover
             .gallery
                 .item
-                    p Cena
-                .item
                     img(src="images/", alt="")
                 .item
-                    p Cena
-                .item
-                    img(src="images/", alt="")
-                .item
-                    p Cena
-                .item
-                    img(src="images/", alt="")
-                .item
-                    p Cena
                 .item
                     img(src="images/", alt="")
                 .item
                 .item
-                    a(href="#galerija", target="_blank")   
+                    a(href="#galerija", target="_blank") galerija
+                .item
+                .item
+                    img(src="images/", alt="")
+                .item
+                .item
+                    img(src="images/", alt="")
+                .item
         .presentation#modeliranje
-            img(src="images/", alt="")
+            .cover
             .gallery
-                img(src="images/", alt="")
-                .cena
-                img(src="images/", alt="")
-                .cena
-                img(src="images/", alt="")
-                .cena
-                img(src="images/", alt="")
-                .cena
-                .cena
-                a(href="#galerija", target="_blank")
+                .item
+                .item
+                    img(src="images/", alt="")
+                .item
+                .item
+                    img(src="images/", alt="")
+                .item
+                .item
+                    img(src="images/", alt="")
+                .item
+                .item
+                    img(src="images/", alt="")
+                .item
+                .item
+                    a(href="#galerija", target="_blank") galerija
         .contactus
 script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")        
 script(type="application/javascript", src="js/slider.js")

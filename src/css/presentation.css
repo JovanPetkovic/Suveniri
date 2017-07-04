@@ -1,0 +1,13 @@
+.presentation {
+  height: 100vh; }
+  .presentation .cover {
+    height: 60%;
+    background-color: red; }
+  .presentation .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    height: 40%; }
+    .presentation .gallery .item {
+      background-color: #545F66;
+      height: 50%;
+      width: 20%; }

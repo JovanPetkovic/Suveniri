@@ -1,14 +1,31 @@
 body, html {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  overflow-x: hidden; }
 
 .landing {
-  border: 1px pink solid;
   height: 100vh;
   display: flex;
   flex-direction: column; }
   .landing .slider {
+    position: relative;
     flex: 1; }
+    .landing .slider .nav {
+      z-index: 1;
+      position: absolute;
+      right: 3%;
+      top: 3%; }
+      .landing .slider .nav a {
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-left: 10px;
+        font-family: "Work Sans";
+        font-weight: 800;
+        line-height: 60%;
+        letter-spacing: 1.5px; }
+        .landing .slider .nav a:hover {
+          text-decoration: underline; }
     .landing .slider ul {
       width: 100%;
       padding: 0;
@@ -33,4 +50,17 @@ body, html {
   .landing .godown {
     height: 10vh;
     background-color: blue;
-    opacity: 0.7; }
+    opacity: 0.7;
+    display: flex; }
+    .landing .godown button {
+      display: block;
+      background-image: url(../images/arrows.png);
+      width: 64px;
+      height: 64px;
+      background-size: contain;
+      margin: auto auto;
+      background-color: transparent;
+      border: none;
+      cursor: pointer; }
+      .landing .godown button:focus {
+        outline: none; }
