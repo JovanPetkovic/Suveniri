@@ -3,9 +3,11 @@ html
     head
         meta(charset="utf-8")
         title Suveniri i Modeliranje
+        //build:css css/index.min.css
         link(rel="stylesheet", type="text/css", href="css/slider.css")
         link(rel="stylesheet", type="text/css", href="css/presentation.css")
         link(rel="stylesheet", type="text/css", href="css/navigation.css")
+        //endbuild
         link(href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet")
     body
         .landing
@@ -24,7 +26,7 @@ html
             .godown
                 button(type="", )
         .navigation
-            button suveniri
+            button.clicked suveniri
             button modeliranje
             button kontakt
         .presentation#suveniri
@@ -63,6 +65,9 @@ html
                 .item
                 .item
                     a(href="#galerija", target="_blank") galerija
-        .contactus
-script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")        
+        .contactus#kontakt
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")    
+//build:js js/index.min.js   
 script(type="application/javascript", src="js/slider.js")
+script(type="application/javascript", src="js/navigation.js")
+//endbuild

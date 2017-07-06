@@ -21,14 +21,28 @@ $(function(){
             var pause = 8000;
             var length = this.$li.length;
             setInterval(function(){
-                this.$li[i%length].fadeOut(speed,function(){
-                    this.$li[(i+1)%length].fadeIn(speed);
-                    i++;
-                }.bind(this));
+                this.$li[i%length].fadeOut(speed);
+                this.$li[(i+1)%length].fadeIn(speed);
+                i++;
             }.bind(this),pause,function(){
 
             });
         }
     }
+    var arrow = {
+        init: function(){
+            this.cacheDom();
+            this.arrowClick();
+        },
+        cacheDom: function(){
+            this.$btn = $('.godown').find('button');
+        },
+        arrowClick: function(){
+            this.$btn.click(function(){
+                $('html,body').animate({scrollTop:$(window).height()},1000);
+            })
+        }
+    }
     slider.init();
+    arrow.init();
 })

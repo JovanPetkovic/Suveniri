@@ -17,6 +17,9 @@
     letter-spacing: 1px;
     color: #545F66;
     font-size: 110%; }
+    .navigation button:focus {
+      outline: none; }
 
 .clicked {
-  border-bottom: 5px solid #18DCE2; }
+  border: none;
+  border-bottom: 5px solid #18DCE2 !important; }
