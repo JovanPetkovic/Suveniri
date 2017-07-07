@@ -7,67 +7,78 @@ html
         link(rel="stylesheet", type="text/css", href="css/slider.css")
         link(rel="stylesheet", type="text/css", href="css/presentation.css")
         link(rel="stylesheet", type="text/css", href="css/navigation.css")
+        link(rel="stylesheet", type="text/css", href="css/main.css")
         //endbuild
         link(href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet")
     body
-        .landing
-            .slider
-                .nav
-                    a(href="#suveniri", target="_blank") suveniri
-                    a(href="#modeliranje", target="_blank") modeliranje
-                    a(href="#galerija", target="_blank") galerija
-                    a(href="#kontakt", target="_blank") kontakt
-                ul
-                    li slide 1
-                    li slide 2
-                    li slide 3
-                    li slide 4
-                    li slide 5
-            .godown
-                button(type="", )
-        .navigation
-            button.clicked suveniri
-            button modeliranje
-            button kontakt
-        .presentation#suveniri
-            .cover
-            .gallery
-                .item
-                    img(src="images/", alt="")
-                .item
-                .item
-                    img(src="images/", alt="")
-                .item
-                .item
-                    a(href="#galerija", target="_blank") galerija
-                .item
-                .item
-                    img(src="images/", alt="")
-                .item
-                .item
-                    img(src="images/", alt="")
-                .item
-        .presentation#modeliranje
-            .cover
-            .gallery
-                .item
-                .item
-                    img(src="images/", alt="")
-                .item
-                .item
-                    img(src="images/", alt="")
-                .item
-                .item
-                    img(src="images/", alt="")
-                .item
-                .item
-                    img(src="images/", alt="")
-                .item
-                .item
-                    a(href="#galerija", target="_blank") galerija
-        .contactus#kontakt
+        .container
+            .landing
+                .slider
+                    .nav
+                        a(href="#suveniri", target="_blank") suveniri
+                        a(href="#modeliranje", target="_blank") modeliranje
+                        a(href="#galerija", target="_blank") galerija
+                        a(href="#kontakt", target="_blank") kontakt
+                    ul
+                        li slide 1
+                        li slide 2
+                        li slide 3
+                        li slide 4
+                        li slide 5
+                .godown
+                    button(type="", )
+            .navigation
+                button.clicked suveniri
+                button modeliranje
+                button kontakt
+            .presentation#suveniri
+                .cover
+                    ul
+                        li#suveniri1
+                        li.hidden#suveniri2
+                        li.hidden#suveniri3
+                        li.hidden#suveniri4
+                .gallery
+                    .item
+                    button(data-id="suveniri1").item
+                    .item
+                    button(data-id="suveniri2").item
+                    .item
+                    button(data-id="suveniri3").item
+                    .item
+                    button(data-id="suveniri4").item
+                    .item
+                    a(href="#galerija", target="_blank").item
+                        .galerija
+                            h2 Galerija
+                            h2 Suvenira
+                            img(src="images/right-arrow.png", alt="")
+            .presentation#modeliranje
+                .cover
+                    ul
+                        li#modeliranje1
+                        li.hidden#modeliranje2
+                        li.hidden#modeliranje3
+                        li.hidden#modeliranje4
+                .gallery
+                    .item
+                    button(data-id="modeliranje1").item
+                    .item
+                    button(data-id="modeliranje2").item
+                    .item
+                    button(data-id="modeliranje3").item
+                    .item
+                    button(data-id="modeliranje4").item
+                    .item
+                    a(href="#galerija", target="_blank").item
+                        .galerija
+                            h2 Galerija
+                            h2 Modela
+                            img(src="images/right-arrow.png", alt="")
+            .contactus#kontakt
 script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")    
-//build:js js/index.min.js   
+//build:js js/index.min.js
+script(type="application/javascript", src="js/presentation.js")
 script(type="application/javascript", src="js/slider.js")
 script(type="application/javascript", src="js/navigation.js")
 //endbuild

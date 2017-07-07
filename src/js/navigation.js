@@ -27,9 +27,8 @@ $(function(){
             this.distBottom = new Array;
             for(var i=0;i<this.$dist.length;i++){
                 this.distHeight[i] = this.$dist[i].height();
-                this.distTop[i] = this.$dist[i].offset().top - this.distHeight[i]/4;
+                this.distTop[i] = this.$dist[i].offset().top - this.distHeight[i]/5;
                 this.distBottom[i] = this.distTop[i] + this.distHeight[i];
-                console.log(this.distHeight[i],this.distTop[i],this.distBottom[i]);
             }
         },
         buttonClick: function(){

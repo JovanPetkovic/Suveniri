@@ -7,65 +7,89 @@
     <link rel="stylesheet" type="text/css" href="css/slider.css">
     <link rel="stylesheet" type="text/css" href="css/presentation.css">
     <link rel="stylesheet" type="text/css" href="css/navigation.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <!--endbuild-->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
   </head>
   <body>
-    <div class="landing">
-      <div class="slider">
-        <div class="nav"><a href="#suveniri" target="_blank">suveniri</a><a href="#modeliranje" target="_blank">modeliranje</a><a href="#galerija" target="_blank">galerija</a><a href="#kontakt" target="_blank">kontakt</a></div>
-        <ul>
-          <li>slide 1</li>
-          <li>slide 2</li>
-          <li>slide 3</li>
-          <li>slide 4</li>
-          <li>slide 5</li>
-        </ul>
+    <div class="container">
+      <div class="landing">
+        <div class="slider">
+          <div class="nav"><a href="#suveniri" target="_blank">suveniri</a><a href="#modeliranje" target="_blank">modeliranje</a><a href="#galerija" target="_blank">galerija</a><a href="#kontakt" target="_blank">kontakt</a></div>
+          <ul>
+            <li>slide 1</li>
+            <li>slide 2</li>
+            <li>slide 3</li>
+            <li>slide 4</li>
+            <li>slide 5</li>
+          </ul>
+        </div>
+        <div class="godown">
+          <button type=""></button>
+        </div>
       </div>
-      <div class="godown">
-        <button type=""></button>
+      <div class="navigation">
+        <button class="clicked">suveniri</button>
+        <button>modeliranje</button>
+        <button>kontakt</button>
       </div>
-    </div>
-    <div class="navigation">
-      <button class="clicked">suveniri</button>
-      <button>modeliranje</button>
-      <button>kontakt</button>
-    </div>
-    <div class="presentation" id="suveniri">
-      <div class="cover"></div>
-      <div class="gallery">
-        <div class="item"><img src="images/" alt=""></div>
-        <div class="item"></div>
-        <div class="item"><img src="images/" alt=""></div>
-        <div class="item"></div>
-        <div class="item"><a href="#galerija" target="_blank">galerija</a></div>
-        <div class="item"></div>
-        <div class="item"><img src="images/" alt=""></div>
-        <div class="item"></div>
-        <div class="item"><img src="images/" alt=""></div>
-        <div class="item"></div>
+      <div class="presentation" id="suveniri">
+        <div class="cover">
+          <ul>
+            <li id="suveniri1"></li>
+            <li class="hidden" id="suveniri2"></li>
+            <li class="hidden" id="suveniri3"></li>
+            <li class="hidden" id="suveniri4"></li>
+          </ul>
+        </div>
+        <div class="gallery">
+          <div class="item"></div>
+          <button class="item" data-id="suveniri1"></button>
+          <div class="item"></div>
+          <button class="item" data-id="suveniri2"></button>
+          <div class="item"></div>
+          <button class="item" data-id="suveniri3"></button>
+          <div class="item"></div>
+          <button class="item" data-id="suveniri4"></button>
+          <div class="item"></div><a class="item" href="#galerija" target="_blank">
+            <div class="galerija">
+              <h2>Galerija</h2>
+              <h2>Suvenira</h2><img src="images/right-arrow.png" alt="">
+            </div></a>
+        </div>
       </div>
-    </div>
-    <div class="presentation" id="modeliranje">
-      <div class="cover"></div>
-      <div class="gallery">
-        <div class="item"></div>
-        <div class="item"><img src="images/" alt=""></div>
-        <div class="item"></div>
-        <div class="item"><img src="images/" alt=""></div>
-        <div class="item"></div>
-        <div class="item"><img src="images/" alt=""></div>
-        <div class="item"></div>
-        <div class="item"><img src="images/" alt=""></div>
-        <div class="item"></div>
-        <div class="item"><a href="#galerija" target="_blank">galerija</a></div>
+      <div class="presentation" id="modeliranje">
+        <div class="cover">
+          <ul>
+            <li id="modeliranje1"></li>
+            <li class="hidden" id="modeliranje2"></li>
+            <li class="hidden" id="modeliranje3"></li>
+            <li class="hidden" id="modeliranje4"></li>
+          </ul>
+        </div>
+        <div class="gallery">
+          <div class="item"></div>
+          <button class="item" data-id="modeliranje1"></button>
+          <div class="item"></div>
+          <button class="item" data-id="modeliranje2"></button>
+          <div class="item"></div>
+          <button class="item" data-id="modeliranje3"></button>
+          <div class="item"></div>
+          <button class="item" data-id="modeliranje4"></button>
+          <div class="item"></div><a class="item" href="#galerija" target="_blank">
+            <div class="galerija">
+              <h2>Galerija</h2>
+              <h2>Modela</h2><img src="images/right-arrow.png" alt="">
+            </div></a>
+        </div>
       </div>
+      <div class="contactus" id="kontakt"></div>
     </div>
-    <div class="contactus" id="kontakt"></div>
   </body>
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">   </script>
-<!--build:js js/index.min.js   -->
+<!--build:js js/index.min.js-->
+<script type="application/javascript" src="js/presentation.js"></script>
 <script type="application/javascript" src="js/slider.js"></script>
 <script type="application/javascript" src="js/navigation.js"></script>
 <!--endbuild-->
