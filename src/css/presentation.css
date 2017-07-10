@@ -1,6 +1,7 @@
 .presentation {
-  height: 100vh; }
+  height: calc(100vh - 50px); }
   .presentation .cover {
+    position: relative;
     height: 60%; }
     .presentation .cover ul {
       margin: 0;
@@ -14,15 +15,11 @@
         margin: 0;
         height: 100%;
         width: 100%;
-        position: absolute; }
-        .presentation .cover ul li:nth-of-type(1) {
-          background-color: green; }
-        .presentation .cover ul li:nth-of-type(2) {
-          background-color: blue; }
-        .presentation .cover ul li:nth-of-type(3) {
-          background-color: red; }
-        .presentation .cover ul li:nth-of-type(4) {
-          background-color: purple; }
+        position: absolute;
+        background-size: 100% 100%;
+        background-repeat: no-repeat; }
+        .presentation .cover ul li:nth-of-type(2), .presentation .cover ul li:nth-of-type(3), .presentation .cover ul li:nth-of-type(4) {
+          display: none; }
   .presentation .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -34,14 +31,9 @@
       background-color: #545F66;
       height: 50%;
       width: 20%; }
-    .presentation .gallery button:nth-of-type(1) {
-      background-color: green; }
-    .presentation .gallery button:nth-of-type(2) {
-      background-color: blue; }
-    .presentation .gallery button:nth-of-type(3) {
-      background-color: red; }
-    .presentation .gallery button:nth-of-type(4) {
-      background-color: purple; }
+    .presentation .gallery button {
+      background-size: 100% 100%;
+      background-repeat: no-repeat; }
     .presentation .gallery a {
       background-color: #333 !important;
       text-decoration: none; }
@@ -64,4 +56,27 @@
           height: 30%; }
 
 .hidden {
-  display: none; }
+  display: none !important; }
+
+#suveniri {
+  margin-top: 50px; }
+  #suveniri #suveniri1, #suveniri button:nth-of-type(1) {
+    background-image: url(../images/suveniri/1.jpg); }
+  #suveniri #suveniri2, #suveniri button:nth-of-type(2) {
+    background-image: url(../images/suveniri/2.jpg); }
+  #suveniri #suveniri3, #suveniri button:nth-of-type(3) {
+    background-image: url(../images/suveniri/3.jpg); }
+  #suveniri #suveniri4, #suveniri button:nth-of-type(4) {
+    background-image: url(../images/suveniri/4.jpg); }
+
+#modeliranje #modeliranje1, #modeliranje button:nth-of-type(1) {
+  background-image: url(../images/modeliranje/1.jpg); }
+
+#modeliranje #modeliranje2, #modeliranje button:nth-of-type(2) {
+  background-image: url(../images/modeliranje/2.jpg); }
+
+#modeliranje #modeliranje3, #modeliranje button:nth-of-type(3) {
+  background-image: url(../images/modeliranje/3.jpg); }
+
+#modeliranje #modeliranje4, #modeliranje button:nth-of-type(4) {
+  background-image: url(../images/modeliranje/4.jpg); }

@@ -7,6 +7,7 @@ $(function(){
             this.buttonClick();
             this.navPosition();
             this.buttonSwitch();
+            this.$dist[2].hide();
         },
         cacheDom: function() {
             this.$nav = $('.navigation');
@@ -22,33 +23,52 @@ $(function(){
             }
         },
         distInit: function(){
+            this.offsetTop = new Array;
             this.distHeight = new Array;
             this.distTop =  new Array;
             this.distBottom = new Array;
             for(var i=0;i<this.$dist.length;i++){
                 this.distHeight[i] = this.$dist[i].height();
-                this.distTop[i] = this.$dist[i].offset().top - this.distHeight[i]/5;
+                this.offsetTop[i] = this.$dist[i].offset().top - 50;
+                this.distTop[i] = this.offsetTop[i] - this.distHeight[i]/5;
                 this.distBottom[i] = this.distTop[i] + this.distHeight[i];
             }
         },
         buttonClick: function(){
             var self = this;
-            function btnClick(index){
-                self.$btn.forEach(function(element){
-                    element.removeClass('clicked');
-                })
-                this.addClass('clicked');
-                $(window).unbind('scroll');
-                self.navPosition();
-                $('html,body').animate({scrollTop:self.$dist[index].offset().top}, 1000, function(){
-                    self.buttonSwitch();
-                });
-            }
             this.$btn.forEach(function(element,index){
                 element.on('click', function(){
                     btnClick.call(element,index);
                 })
             })
+            function btnClick(index){
+                $(window).unbind('scroll');
+                self.$btn.forEach(function(element){
+                    element.removeClass('clicked');
+                })
+                this.addClass('clicked');
+                self.navPosition();
+                $('html,body').animate({scrollTop:self.offsetTop[index]}, 1000, function(){
+                    if(index===2){
+                        self.$dist[2].slideDown(1000,function(){
+                            $(window).scroll(function(){
+                                $(window).unbind('scroll');
+                                self.buttonSwitch();
+                                self.navPosition();
+                            });
+                            var interval = setInterval(function(){
+                                if(self.$btn[2].attr('class')!='clicked'){
+                                    self.$dist[2].slideUp(1000);
+                                    clearInterval(interval);
+                                }
+                            },100)
+                        });
+                    }
+                    else{
+                        self.buttonSwitch();
+                    }
+                });
+            }
         },
         navPosition: function() {
             $(window).on('scroll',function(){
@@ -61,7 +81,10 @@ $(function(){
                         });
                     }
                     else {
-                        this.$nav.css({position:'static'});
+                        this.$nav.css({
+                            position:'absolute',
+                            top: '100%'
+                        });
                     }
                 }.bind(this))
             }.bind(this))
@@ -71,14 +94,14 @@ $(function(){
             $(window).on('scroll', function(){
                 var wScroll = $(window).scrollTop();
                 window.requestAnimationFrame(function(){
-                    self.$dist.forEach(function(element,index){
-                        if((wScroll<self.distBottom[index])&&(wScroll>self.distTop[index])){
+                    for(var i=0;i<self.$dist.length-1;i++){
+                        if((wScroll<self.distBottom[i])&&(wScroll>self.distTop[i])){
                             self.$btn.forEach(function(element){
                                 element.removeClass('clicked');
                             })
-                            self.$btn[index].addClass('clicked');
+                            self.$btn[i].addClass('clicked');
                         }
-                    })
+                    }
                 })
             })
         }

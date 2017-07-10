@@ -43,6 +43,30 @@ $(function(){
             })
         }
     }
+    class Button{
+        constructor(domButton){
+            this.$btn = $(domButton);
+        }
+        init(){
+            this.cacheDom();
+            this.buttonClick();
+        }
+        cacheDom(){
+            this.$dist = $('#'+this.$btn.html());
+        }
+        buttonClick(){
+            var speed = 1000;
+            this.$btn.on('click',function(){
+                $('html,body').animate({scrollTop: this.$dist.offset().top},speed);
+            }.bind(this))
+        }
+    }
+    var buttons = $('.nav').find('button');
+    var objectButtons = new Array();
+    for(var i=0;i<buttons.length;i++){
+        objectButtons.push(new Button(buttons[i]));
+        objectButtons[i].init();
+    }
     slider.init();
     arrow.init();
 })

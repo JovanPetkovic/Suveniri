@@ -1,6 +1,7 @@
 .presentation
-    height: 100vh
+    height: calc(100vh - 50px)
     .cover
+        position: relative
         height: 60%
         ul
             margin: 0
@@ -15,15 +16,10 @@
                 height: 100%
                 width: 100%
                 position: absolute
-                &:nth-of-type(1)
-                    background-color: green
-                &:nth-of-type(2)
-                    background-color: blue
-                &:nth-of-type(3)
-                    background-color: red
-                &:nth-of-type(4)
-                    background-color: purple
-
+                background-size: 100% 100%
+                background-repeat: no-repeat
+                &:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4)
+                    display: none
     .gallery
         display: flex
         flex-wrap: wrap
@@ -36,14 +32,8 @@
             height: 50%
             width: 20%
         button
-            &:nth-of-type(1)
-                background-color: green
-            &:nth-of-type(2)
-                background-color: blue
-            &:nth-of-type(3)
-                background-color: red
-            &:nth-of-type(4)
-                background-color: purple
+            background-size: 100% 100%
+            background-repeat: no-repeat
         a
             background-color: #333 !important
             text-decoration: none
@@ -65,4 +55,24 @@
                     width: 30%
                     height: 30%
 .hidden
-    display: none
+    display: none !important
+#suveniri
+    margin-top: 50px
+    #suveniri1,button:nth-of-type(1)
+        background-image: url(../images/suveniri/1.jpg)
+    #suveniri2,button:nth-of-type(2)
+        background-image: url(../images/suveniri/2.jpg)
+    #suveniri3,button:nth-of-type(3)
+        background-image: url(../images/suveniri/3.jpg)
+    #suveniri4,button:nth-of-type(4)
+        background-image: url(../images/suveniri/4.jpg)
+
+#modeliranje
+    #modeliranje1,button:nth-of-type(1)
+        background-image: url(../images/modeliranje/1.jpg)
+    #modeliranje2,button:nth-of-type(2)
+        background-image: url(../images/modeliranje/2.jpg)
+    #modeliranje3,button:nth-of-type(3)
+        background-image: url(../images/modeliranje/3.jpg)
+    #modeliranje4,button:nth-of-type(4)
+        background-image: url(../images/modeliranje/4.jpg)

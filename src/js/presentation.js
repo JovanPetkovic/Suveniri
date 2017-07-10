@@ -24,12 +24,8 @@ $(function(){
             var self= this;
             var button = $(domButton); //button that is clicked
             var cover = self.$presentation.find('#'+button.attr('data-id')); //picture that matches the button
-            this.$notHidden.fadeOut(speed,function(){
-                $(this).addClass('hidden');
-            })
-            cover.fadeIn(speed,function(){
-                cover.removeClass('hidden');
-            });
+            this.$notHidden.fadeOut(speed);
+            cover.fadeIn(speed);
             this.$notHidden = cover;
         }
         buttonEvent(){

@@ -16,7 +16,9 @@ body, html {
       position: absolute;
       right: 3%;
       top: 3%; }
-      .landing .slider .nav a {
+      .landing .slider .nav a, .landing .slider .nav button {
+        border: none;
+        background-color: Transparent;
         color: white;
         text-decoration: none;
         text-transform: uppercase;
@@ -24,9 +26,12 @@ body, html {
         font-family: "Work Sans";
         font-weight: 800;
         line-height: 60%;
-        letter-spacing: 1.5px; }
-        .landing .slider .nav a:hover {
+        letter-spacing: 1.5px;
+        font-size: 100%; }
+        .landing .slider .nav a:hover, .landing .slider .nav button:hover {
           text-decoration: underline; }
+      .landing .slider .nav button:focus {
+        outline: none; }
     .landing .slider ul {
       width: 100%;
       padding: 0;
@@ -37,17 +42,24 @@ body, html {
         position: absolute;
         height: 100%;
         width: 100%;
-        display: inline-block; }
+        display: inline-block;
+        background-size: 100% 100%; }
         .landing .slider ul li:nth-of-type(1) {
-          background-color: red; }
+          background-image: url(../images/slider/1.jpg); }
         .landing .slider ul li:nth-of-type(2) {
-          background-color: blue; }
+          background-image: url(../images/slider/2.jpg); }
         .landing .slider ul li:nth-of-type(3) {
-          background-color: green; }
+          background-image: url(../images/slider/3.jpg); }
         .landing .slider ul li:nth-of-type(4) {
-          background-color: yellow; }
+          background-image: url(../images/slider/4.jpg); }
         .landing .slider ul li:nth-of-type(5) {
-          background-color: purple; }
+          background-image: url(../images/slider/5.jpg); }
+        .landing .slider ul li:nth-of-type(6) {
+          background-image: url(../images/slider/6.jpg); }
+        .landing .slider ul li:nth-of-type(7) {
+          background-image: url(../images/slider/7.jpg); }
+        .landing .slider ul li:nth-of-type(8) {
+          background-image: url(../images/slider/8.jpg); }
   .landing .godown {
     height: 10vh;
     background-color: #545F66;

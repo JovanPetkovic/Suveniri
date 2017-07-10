@@ -1,4 +1,64 @@
+button:hover {
+  cursor: pointer; }
+
 .container {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto; }
+
+.contactus {
+  z-index: 10;
+  margin-top: 50px;
+  margin-right: 50px;
+  border-radius: 20px;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 200px;
+  width: 300px;
+  background-color: #545F66;
+  display: none; }
+  .contactus button {
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: none;
+    background-image: url(../images/delete.png);
+    background-color: Transparent; }
+    .contactus button:hover {
+      cursor: pointer; }
+    .contactus button:focus {
+      outline: none; }
+  .contactus .contactblock {
+    width: 200px;
+    margin: auto;
+    font-family: "Merriweather";
+    font-weight: 400; }
+
+.contact {
+  padding-top: -50px;
+  font-family: "Work Sans";
+  text-transform: uppercase;
+  right: 0;
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  z-index: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 80%; }
+  .contact h2 {
+    color: #18DCE2; }
+  .contact h3 {
+    color: #545F66; }
+  .contact .block {
+    margin-left: 20px;
+    margin-bottom: 30px; }
+  .contact .biggerblock {
+    margin-top: 50px; }

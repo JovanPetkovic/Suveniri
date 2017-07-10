@@ -10,21 +10,25 @@ html
         link(rel="stylesheet", type="text/css", href="css/main.css")
         //endbuild
         link(href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet")
     body
         .container
             .landing
                 .slider
                     .nav
-                        a(href="#suveniri", target="_blank") suveniri
-                        a(href="#modeliranje", target="_blank") modeliranje
+                        button suveniri
+                        button modeliranje
                         a(href="#galerija", target="_blank") galerija
-                        a(href="#kontakt", target="_blank") kontakt
+                        button kontakt
                     ul
-                        li slide 1
-                        li slide 2
-                        li slide 3
-                        li slide 4
-                        li slide 5
+                        li
+                        li
+                        li
+                        li
+                        li
+                        li
+                        li
+                        li
                 .godown
                     button(type="", )
             .navigation
@@ -35,9 +39,9 @@ html
                 .cover
                     ul
                         li#suveniri1
-                        li.hidden#suveniri2
-                        li.hidden#suveniri3
-                        li.hidden#suveniri4
+                        li#suveniri2
+                        li#suveniri3
+                        li#suveniri4
                 .gallery
                     .item
                     button(data-id="suveniri1").item
@@ -57,9 +61,20 @@ html
                 .cover
                     ul
                         li#modeliranje1
-                        li.hidden#modeliranje2
-                        li.hidden#modeliranje3
-                        li.hidden#modeliranje4
+                        li#modeliranje2
+                        li#modeliranje3
+                        li#modeliranje4
+                    .contact#kontakt
+                        .biggerblock    
+                            .block
+                                h2 Suveniri:
+                                h3 Danijela 0669602144
+                            .block    
+                                h2 Modeliranje:
+                                h3 Zoran 0644735719
+                        .block
+                            h2 Radno Vreme
+                            h3 9:00 - 21:00
                 .gallery
                     .item
                     button(data-id="modeliranje1").item
@@ -75,9 +90,18 @@ html
                             h2 Galerija
                             h2 Modela
                             img(src="images/right-arrow.png", alt="")
-            .contactus#kontakt
+            .contactus
+                .info
+                    .contactblock
+                        h2 Suveniri:
+                        h3 Danijela 0669602144
+                    .contactblock
+                        h2 Modeliranje:
+                        h3 Zoran 0644735719
+                    button
 script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")    
 //build:js js/index.min.js
+script(type="application/javascript", src="js/main.js")
 script(type="application/javascript", src="js/presentation.js")
 script(type="application/javascript", src="js/slider.js")
 script(type="application/javascript", src="js/navigation.js")
