@@ -1,31 +1,34 @@
 {
-  "name": "gsm",
+  "name": "suveniri",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SoniXx1337/GSM.git"
+    "url": "git+https://github.com/JovanPetkovic/Suveniri.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SoniXx1337/GSM/issues"
+    "url": "https://github.com/JovanPetkovic/Suveniri/issues"
   },
-  "homepage": "https://github.com/SoniXx1337/GSM#readme",
+  "homepage": "https://github.com/JovanPetkovic/Suveniri#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.12",
-    "gulp": "^3.9.1",
-    "gulp-cache": "^0.4.6",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^3.2.0",
-    "gulp-pug": "^3.3.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
-    "gulp-useref": "^3.1.2"
+    "browser-sync-webpack-plugin": "^1.2.0",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^2.29.0",
+    "jquery": "^3.2.1",
+    "node-sass": "^4.5.3",
+    "pug-html-loader": "^1.1.5",
+    "sass-loader": "^6.0.6",
+    "webpack": "^3.2.0",
+    "webpack-dev-server": "^2.5.1"
   }
 }

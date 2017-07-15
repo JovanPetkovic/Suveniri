@@ -1,0 +1,95 @@
+.presentation
+    height: calc(100vh - 50px)
+    overflow: hidden
+    background-size: 100% 100%
+    background-repeat: no-repeat
+    .cover
+        position: relative
+        height: 70%
+        padding: 30px 0
+        overflow: hidden
+        ul
+            margin: 0
+            position: relative
+            height: 100%
+            list-style-type: none
+            display: flex
+            justify-content: center
+            li
+                padding: 0
+                margin: 0
+                position: absolute
+                &:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4)
+                    display: none
+                img
+                    height: 100%
+                    max-width: 100%
+    .gallery
+        display: flex
+        flex-wrap: wrap
+        height: 40%
+        justify-content: space-around
+        .item
+            padding: 0
+            outline: none
+            border: none
+            background-color: #545F66
+            height: 50%
+            width: 15%
+            &:nth-of-type(1)
+                transform: rotate(9deg)
+            &:nth-of-type(2)
+                transform: rotate(-11deg)
+            &:nth-of-type(3)
+                transform: rotate(16deg)
+            &:nth-of-type(4)
+                transform: rotate(-7deg)
+            &:nth-of-type(5)
+                transform: rotate(2deg)
+        button
+            background-size: 100% 100%
+            background-repeat: no-repeat
+        a
+            background-color: #333 !important
+            text-decoration: none
+            .galerija
+                display: flex
+                flex-direction: column
+                height: 100%
+                justify-content: center
+                align-items: center
+                h2
+                    margin: 3px
+                    line-height: 100%
+                    letter-spacing: 2px
+                    color: white
+                    font-family: "Work Sans"
+                    text-transform: uppercase
+                img
+                    margin-bottom: 0
+                    width: 30%
+                    height: 30%
+.hidden
+    display: none !important
+#suveniri
+    margin-top: 50px
+    background-image: url(../images/suveniri/suveniribackground.jpg)
+    button:nth-of-type(1)
+        background-image: url(../images/suveniri/1.jpg)
+    button:nth-of-type(2)
+        background-image: url(../images/suveniri/2.jpg)
+    button:nth-of-type(3)
+        background-image: url(../images/suveniri/3.jpg)
+    button:nth-of-type(4)
+        background-image: url(../images/suveniri/4.jpg)
+
+#modeliranje
+    background-image: url(../images/modeliranje/background.jpg)
+    button:nth-of-type(1)
+        background-image: url(../images/modeliranje/1.jpg)
+    button:nth-of-type(2)
+        background-image: url(../images/modeliranje/2.jpg)
+    button:nth-of-type(3)
+        background-image: url(../images/modeliranje/3.jpg)
+    button:nth-of-type(4)
+        background-image: url(../images/modeliranje/4.jpg)

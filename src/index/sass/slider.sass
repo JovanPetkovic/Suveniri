@@ -1,0 +1,77 @@
+body,html
+    margin: 0
+    padding: 0
+    overflow-x: hidden
+    background-color: #DADADA
+.landing
+    height: 100vh
+    display: flex
+    flex-direction: column
+    .slider
+        position: relative
+        flex: 1
+        .nav
+            z-index: 1
+            position: absolute
+            right: 3%
+            top: 3%
+            a, button
+                border: none
+                background-color: Transparent
+                color: white
+                text-decoration: none
+                text-transform: uppercase
+                margin-left: 10px
+                font-family: "Work Sans"
+                font-weight: 800
+                line-height: 60%
+                letter-spacing: 1.5px
+                font-size: 100%
+                &:hover
+                    text-decoration: underline
+            button:focus
+                outline: none
+        ul
+            width: 100%
+            padding: 0
+            height: 100%
+            margin: 0
+            list-style-type: none
+            li
+                position: absolute
+                height: 100%
+                width: 100%
+                display: inline-block
+                background-size: 100% 100%
+                &:nth-of-type(1)
+                    background-image: url(../images/slider/1.jpg)
+                &:nth-of-type(2)
+                    background-image: url(../images/slider/2.jpg)
+                &:nth-of-type(3)
+                    background-image: url(../images/slider/3.jpg)
+                &:nth-of-type(4)
+                    background-image: url(../images/slider/4.jpg)
+                &:nth-of-type(5)
+                    background-image: url(../images/slider/5.jpg)
+                &:nth-of-type(6)
+                    background-image: url(../images/slider/6.jpg)
+                &:nth-of-type(7)
+                    background-image: url(../images/slider/7.jpg)
+                &:nth-of-type(8)
+                    background-image: url(../images/slider/8.jpg)
+    .godown
+        height: 200px
+        display: block
+        background-color: #545F66
+        button
+            display: block
+            background-image: url(../images/arrows.png)
+            width: 64px
+            height: 64px
+            background-size: contain
+            margin: auto auto
+            background-color: transparent
+            border: none
+            cursor: pointer
+            &:focus
+                outline: none
