@@ -4,9 +4,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 module.exports = {
-    entry: "./src/index/js/entry.js",
+    entry: "./src/gallery/js/entry.js",
     output: {
-        path: __dirname + "/dist/index",
+        path: __dirname + "/dist/gallery",
         filename: "main.js"
     },
     module: {
@@ -55,6 +55,16 @@ module.exports = {
                         presets: ['env']
                     }
                 }
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                use: 
+                {
+                    loader: 'file-loader',
+                    options: {
+                        name: 'fonts/[name].[ext]'
+                    }
+                }
             }
         ]
     },
@@ -68,7 +78,7 @@ module.exports = {
         new ExtractTextPlugin('style.css'),
         new webpack.optimize.UglifyJsPlugin(),
         new HtmlWebpackPlugin({
-            template: './src/index/index.pug',
+            template: './src/gallery/index.pug',
             filename: 'index.html'
         })
     ]
