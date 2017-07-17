@@ -6,6 +6,10 @@
 	display: flex
 	flex-direction: column
 	.cover
+		background:
+			position: 0 0
+			size: 100%
+			repeat: no-repeat
 		position: relative
 		width: 100%
 		height: 400px
@@ -22,10 +26,28 @@
 			color: white
 			font-family: 'AfterSchool'
 			letter-spacing: 15px
+	.gallery
+		height: 100vh
+		width: 960px
+		margin: 20px auto 0 auto
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		.item
+			margin: 5px
+			width: 200px
+			height: 200px
+			background-color: pink
+			opacity:
 #etnomodeli
 	.cover
 		background:
-			repeat: no-repeat
 			image: url(../images/etno/cover2.jpg)
-			position: 0% -20%
-			attachment: fixed
+#planine
+	.cover
+		background:
+			image: url(../images/planine/cover2.jpg)
+#morski
+	.cover
+		background: 
+			image: url(../images/morski/cover2.jpg)
