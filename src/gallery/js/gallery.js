@@ -5,11 +5,9 @@ $(function(){
 			this.$cover = $(domElement);
 		}
 		cacheDom(){
-			console.log('hey');
 			this.top = this.$cover.offset().top;
 			this.bottom = this.top + this.$cover.height();
 			this.$h = this.$cover.find('h1');
-			console.log(this.top, this.bottom);
 		}
 		scrollEvent(){
 			var self = this;

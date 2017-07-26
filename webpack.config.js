@@ -13,6 +13,7 @@ module.exports = {
         rules: [
             {
                 test: /\.sass$/,
+                exclude: /(node_modules|bower_components)/,
                 use: ExtractTextPlugin.extract({
                     fallback:"style-loader",
                     use: ["css-loader","sass-loader"]
@@ -20,10 +21,12 @@ module.exports = {
             },
             {
                 test: /\.pug/,
+                exclude: /(node_modules|bower_components)/,
                 loaders: ['html-loader','pug-html-loader']
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
+                exclude: /(node_modules|bower_components)/,
                 use:
                 [
                     'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
@@ -58,6 +61,7 @@ module.exports = {
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2)$/,
+                exclude: /(node_modules|bower_components)/,
                 use: 
                 {
                     loader: 'file-loader',

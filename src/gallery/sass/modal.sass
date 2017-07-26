@@ -1,0 +1,36 @@
+.modalbox
+	top: 0
+	left: 0
+	position: fixed
+	width: 100vw
+	height: 100vh
+	display: none
+	vertical-align: middle
+	align-text: center
+	background:
+		color: rgba(0,0,0,0.7)
+	img
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		position: absolute
+		display: none
+		margin: auto auto
+		height: 70%
+		max-width: 1200px
+	button
+		border: none
+		position: absolute
+		top: 20px
+		right: 30px
+		background:
+			color: Transparent
+			image: url(../images/delete.png)
+			size: 100% 100%
+			repeat: no-repeat
+		height: 80px
+		width: 80px
+		&:focus
+			outline: none
+		&:hover
+			cursor: pointer
