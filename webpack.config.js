@@ -4,9 +4,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 module.exports = {
-    entry: "./src/gallery/js/entry.js",
+    entry: "./src/index/js/entry.js",
     output: {
-        path: __dirname + "/dist/gallery",
+        path: __dirname + "/dist/index",
         filename: "main.js"
     },
     module: {
@@ -82,7 +82,7 @@ module.exports = {
         new ExtractTextPlugin('style.css'),
         new webpack.optimize.UglifyJsPlugin(),
         new HtmlWebpackPlugin({
-            template: './src/gallery/index.pug',
+            template: './src/index/index.pug',
             filename: 'index.html'
         })
     ]
