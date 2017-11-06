@@ -1,24 +1,33 @@
 var $ = require("jquery");
 $(function(){
-    var contact = {
-        init: function(){
-            contact.cacheDom();
-            contact.buttonClick();
-        },
-        cacheDom: function(){
-            this.$btn = $('.nav button:nth-of-type(3)');
-            this.$contact = $('.contactus');
-            this.$contactButton = this.$contact.find('button');
-        },
-        buttonClick(){
-            var self = this;
-            this.$btn.on('click',function(){
-                self.$contact.slideDown();
-                self.$contactButton.click(function(){
-                    self.$contact.slideUp();
-                })
-            })
-        }
-    }
-    contact.init();
+    var $down = $('.landing').find('button');
+    var $nav = $('.nav');
+    $(window).on('scroll',function(){
+        var wScroll = $(window).scrollTop();
+        window.requestAnimationFrame(function(){
+            if(wScroll>0){
+                $nav.addClass('nav-scroll');
+            }
+            else{
+                $nav.removeClass('nav-scroll');
+            }
+        });
+    })
+    $down.on('click',function(){
+        console.log('hey');
+        $('body').animate({scrollTop : window.innerHeight -$nav.height()}, 1000);
+    })
+    var $contactBtn = $($('.links').find('button')[0]);
+    var $contact = $('.links').find('.contact');
+    var $contactExit = $('.contact').find('button');
+    console.log($contactBtn);
+    $contact.css({
+            display: 'flex'
+        }).hide();
+    $contactBtn.on('click', function(){
+        $contact.slideDown(500);
+        $contactExit.on('click', function(){
+            $contact.slideUp(500);
+        })
+    })
 })

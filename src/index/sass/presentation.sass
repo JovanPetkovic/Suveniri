@@ -1,95 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
 .presentation
-    height: calc(100vh - 50px)
-    overflow: hidden
-    background-size: 100% 100%
-    background-repeat: no-repeat
-    .cover
-        position: relative
-        height: 70%
-        padding: 30px 0
-        overflow: hidden
-        ul
-            margin: 0
-            position: relative
-            height: 100%
-            list-style-type: none
-            display: flex
-            justify-content: center
-            li
-                padding: 0
-                margin: 0
-                position: absolute
-                &:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4)
-                    display: none
-                img
-                    height: 100%
-                    max-width: 100%
-    .gallery
+    font-family: "Open Sans", 'sans-serif'
+    background-color: white
+    max-width: 960px
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    .pictures
+        width: 100%
         display: flex
         flex-wrap: wrap
-        height: 40%
-        justify-content: space-around
-        .item
-            padding: 0
-            outline: none
-            border: none
-            background-color: #545F66
-            height: 50%
-            width: 15%
-            &:nth-of-type(1)
-                transform: rotate(9deg)
-            &:nth-of-type(2)
-                transform: rotate(-11deg)
-            &:nth-of-type(3)
-                transform: rotate(16deg)
-            &:nth-of-type(4)
-                transform: rotate(-7deg)
-            &:nth-of-type(5)
-                transform: rotate(2deg)
+        justify-content: center
+        img
+            width: 180px
+            height: 180px
+            margin: 10px
+    .text
+        text-align: center
+        h1
+            margin-bottom: 5px
+    .buttons
         button
-            background-size: 100% 100%
-            background-repeat: no-repeat
-        a
-            background-color: #333 !important
-            text-decoration: none
-            .galerija
-                display: flex
-                flex-direction: column
-                height: 100%
-                justify-content: center
-                align-items: center
-                h2
-                    margin: 3px
-                    line-height: 100%
-                    letter-spacing: 2px
-                    color: white
-                    font-family: "Work Sans"
-                    text-transform: uppercase
-                img
-                    margin-bottom: 0
-                    width: 30%
-                    height: 30%
-.hidden
-    display: none !important
-#suveniri
-    margin-top: 50px
-    background-image: url(../images/suveniri/suveniribackground.jpg)
-    button:nth-of-type(1)
-        background-image: url(../images/suveniri/1.jpg)
-    button:nth-of-type(2)
-        background-image: url(../images/suveniri/2.jpg)
-    button:nth-of-type(3)
-        background-image: url(../images/suveniri/3.jpg)
-    button:nth-of-type(4)
-        background-image: url(../images/suveniri/4.jpg)
+            font-family: "Open Sans", 'sans-serif'
+            margin: 6px
+            background-color: white
+            outline: none
+            border: 1px grey solid
+            font-size: 95%
+        .clicked
+            background-color: #006699
+            color: white
+            border: 1px #006699 solid
+    .exit
+        font-family: "Open Sans", 'sans-serif'
+        color: #006699
+        margin: 10px
+        background-color: white
+        border: none
+        width: 150px
+        font-size: 20px
+.show
+    display: none
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 32px
+    height: 32px
+    z-index: 1
+    transform: translate(-16px,-16px)
+    background-image: url(../images/expand.png)
+    background-color: transparent
+    background-size: 100%
+    border: none
+    &:focus
+        outline: none
+.imgbox
+    position: relative
+    &:hover > .hover
+.hover
+    .show
+        transition: 0.5s all
+        display: block
+    img
+        transition: 0.5s all
+        filter: brightness(30%)
 
-#modeliranje
-    background-image: url(../images/modeliranje/background.jpg)
-    button:nth-of-type(1)
-        background-image: url(../images/modeliranje/1.jpg)
-    button:nth-of-type(2)
-        background-image: url(../images/modeliranje/2.jpg)
-    button:nth-of-type(3)
-        background-image: url(../images/modeliranje/3.jpg)
-    button:nth-of-type(4)
-        background-image: url(../images/modeliranje/4.jpg)
+
+
+
+
