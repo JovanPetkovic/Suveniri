@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans')
 .presentation
+<<<<<<< HEAD
     font-family: "Open Sans", 'sans-serif'
     background-color: white
     max-width: 960px
@@ -9,6 +10,34 @@
     align-items: center
     .pictures
         width: 100%
+=======
+    height: calc(100vh - 50px)
+    overflow: hidden
+    background-size: 100% auto
+    background-repeat: no-repeat
+    .cover
+        position: relative
+        height: 70%
+        padding: 30px 0
+        overflow: hidden
+        ul
+            margin: 0
+            position: relative
+            height: 100%
+            list-style-type: none
+            display: flex
+            justify-content: center
+            li
+                padding: 0
+                margin: 0
+                position: absolute
+                &:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(4)
+                    display: none
+                img
+                    height: 100%
+                    max-width: 100%
+    .gallery
+>>>>>>> a611760f81665103d28cb3e2484f8b4c354ccc33
         display: flex
         flex-wrap: wrap
         justify-content: center

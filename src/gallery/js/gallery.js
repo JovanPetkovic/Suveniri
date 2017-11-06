@@ -25,10 +25,10 @@ $(function(){
 					}	
 					if(wScroll>self.top){
 						if(c){
-							scrollPx+=3;
+							scrollPx+=5;
 						}
 						else{
-							scrollPx-=3;
+							scrollPx-=5;
 						}
 						self.$cover.css({'background-attachment': 'fixed'});
 						if(wScroll<self.bottom){

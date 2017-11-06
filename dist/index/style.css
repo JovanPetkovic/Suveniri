@@ -15,7 +15,6 @@ button:hover {
   position: absolute;
   top: 0;
   right: 0;
-  height: 200px;
   width: 300px;
   background-color: #545F66;
   display: none; }
@@ -109,21 +108,21 @@ body, html {
         display: inline-block;
         background-size: 100% 100%; }
         .landing .slider ul li:nth-of-type(1) {
-          background-image: url(d4c5153b8881b01908d556f0c278ffcd.jpg); }
+          background-image: url(4602bfdab9dbd9b8610e42df566e2ed2.jpg); }
         .landing .slider ul li:nth-of-type(2) {
-          background-image: url(cf150c193beff3768a36ffa2ff20e110.jpg); }
+          background-image: url(252c4c8c6cffa8a3d577f625a6876293.jpg); }
         .landing .slider ul li:nth-of-type(3) {
-          background-image: url(8222301b5621e54fa54d3801df18fbe7.jpg); }
+          background-image: url(563a1f77b9a3bf1613c6e60bd62c25ff.jpg); }
         .landing .slider ul li:nth-of-type(4) {
-          background-image: url(b82ce1b0852cdaab8ec21e265281bc2b.jpg); }
+          background-image: url(c73fd94d086dacb52ba271381cddcf41.jpg); }
         .landing .slider ul li:nth-of-type(5) {
-          background-image: url(48034e1604be11103f8ec194e7131faa.jpg); }
+          background-image: url(a98dce7d6595e5feac0be7d3d9631108.jpg); }
         .landing .slider ul li:nth-of-type(6) {
-          background-image: url(36fd4e6d2c401d8a0319e06b52eef8de.jpg); }
+          background-image: url(217c2570c28f30af778f301277d8c4f9.jpg); }
         .landing .slider ul li:nth-of-type(7) {
-          background-image: url(1471c41292ab447350c7382a5bae1dd1.jpg); }
+          background-image: url(33cea3eaf558e3abd5d07c64f47f9a62.jpg); }
         .landing .slider ul li:nth-of-type(8) {
-          background-image: url(8fe8f2ed3a3444f1ba33b394007a5009.jpg); }
+          background-image: url(169a508c09af6a39f638fcc26ae7c479.jpg); }
   .landing .godown {
     height: 200px;
     display: block;
@@ -166,38 +165,53 @@ body, html {
   border: none;
   border-bottom: 5px solid #18DCE2 !important; }
 .presentation {
-  height: calc(100vh - 50px); }
+  height: calc(100vh - 50px);
+  overflow: hidden;
+  background-size: 100% auto;
+  background-repeat: no-repeat; }
   .presentation .cover {
     position: relative;
-    height: 60%; }
+    height: 70%;
+    padding: 30px 0;
+    overflow: hidden; }
     .presentation .cover ul {
       margin: 0;
       position: relative;
       height: 100%;
-      list-style-type: none; }
+      list-style-type: none;
+      display: flex;
+      justify-content: center; }
       .presentation .cover ul li {
-        top: 0;
-        left: 0;
         padding: 0;
         margin: 0;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        background-size: 100% 100%;
-        background-repeat: no-repeat; }
+        position: absolute; }
         .presentation .cover ul li:nth-of-type(2), .presentation .cover ul li:nth-of-type(3), .presentation .cover ul li:nth-of-type(4) {
           display: none; }
+        .presentation .cover ul li img {
+          height: 100%;
+          max-width: 100%; }
   .presentation .gallery {
     display: flex;
     flex-wrap: wrap;
-    height: 40%; }
+    height: 40%;
+    justify-content: space-around; }
     .presentation .gallery .item {
       padding: 0;
       outline: none;
       border: none;
       background-color: #545F66;
       height: 50%;
-      width: 20%; }
+      width: 15%; }
+      .presentation .gallery .item:nth-of-type(1) {
+        transform: rotate(9deg); }
+      .presentation .gallery .item:nth-of-type(2) {
+        transform: rotate(-11deg); }
+      .presentation .gallery .item:nth-of-type(3) {
+        transform: rotate(16deg); }
+      .presentation .gallery .item:nth-of-type(4) {
+        transform: rotate(-7deg); }
+      .presentation .gallery .item:nth-of-type(5) {
+        transform: rotate(2deg); }
     .presentation .gallery button {
       background-size: 100% 100%;
       background-repeat: no-repeat; }
@@ -226,24 +240,24 @@ body, html {
   display: none !important; }
 
 #suveniri {
-  margin-top: 50px; }
-  #suveniri #suveniri1, #suveniri button:nth-of-type(1) {
-    background-image: url(1134d2e5bef21f5c6eecd4474787e6b6.jpg); }
-  #suveniri #suveniri2, #suveniri button:nth-of-type(2) {
-    background-image: url(34bee28fdefb11bf868dfd4240a5aee0.jpg); }
-  #suveniri #suveniri3, #suveniri button:nth-of-type(3) {
-    background-image: url(1fdc2468674d294a3fbffe6c0c353949.jpg); }
-  #suveniri #suveniri4, #suveniri button:nth-of-type(4) {
-    background-image: url(31b16017f48801e5fe4ffcc9df9fa280.jpg); }
+  margin-top: 50px;
+  background-image: url(62432b0f6e9bba5303c4669e27fad11c.jpg); }
+  #suveniri button:nth-of-type(1) {
+    background-image: url(275f87a3cdc01f474169f14b541bc556.jpg); }
+  #suveniri button:nth-of-type(2) {
+    background-image: url(5db1793d1d2a193ab0c37e219f2abf8a.jpg); }
+  #suveniri button:nth-of-type(3) {
+    background-image: url(0f4c20afed47f053e80a6430d107038e.jpg); }
+  #suveniri button:nth-of-type(4) {
+    background-image: url(001a59269c5232272e1cd496ee3f8685.jpg); }
 
-#modeliranje #modeliranje1, #modeliranje button:nth-of-type(1) {
-  background-image: url(71ee9b27b80dc5256c46ec61e6e7e66b.jpg); }
-
-#modeliranje #modeliranje2, #modeliranje button:nth-of-type(2) {
-  background-image: url(5c5dd3d34b3d4da91218ab4f73fe1768.jpg); }
-
-#modeliranje #modeliranje3, #modeliranje button:nth-of-type(3) {
-  background-image: url(b54960965c33bbd0100865b91cb55e31.jpg); }
-
-#modeliranje #modeliranje4, #modeliranje button:nth-of-type(4) {
-  background-image: url(e3cedb9953c367eb1c937397c9485594.jpg); }
+#modeliranje {
+  background-image: url(81a7312762a1a0cab86630ecaf3f9240.jpg); }
+  #modeliranje button:nth-of-type(1) {
+    background-image: url(c89b1366de8d180846c7a2cd06f476d3.jpg); }
+  #modeliranje button:nth-of-type(2) {
+    background-image: url(7ec307ad54a1ea3a137e2ffc882099a1.jpg); }
+  #modeliranje button:nth-of-type(3) {
+    background-image: url(26b7596e16f644fe031c3144eacd35da.jpg); }
+  #modeliranje button:nth-of-type(4) {
+    background-image: url(5f8b6f9b6d0abbe556ce1abbb401f511.jpg); }

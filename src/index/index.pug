@@ -2,10 +2,13 @@ doctype
 html
     head
         meta(charset="utf-8")
+        meta(name="decritpion",content="Suveniri i Modeli")
+        meta(name="author", content="Jovan Petković")
         title Suveniri i Modeliranje
         link(href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet")
         link(href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet")
     body
+<<<<<<< HEAD
         .nav
             img(src="images/logo.png")
             .links
@@ -18,6 +21,90 @@ html
                         p Danijela 0669602144
                         p Danijela
                     .contactbox
+=======
+        .container
+            .landing
+                .slider
+                    .nav
+                        button suveniri
+                        button modeliranje
+                        a(href="../gallery/index.html", target="_blank") galerija
+                        button kontakt
+                    ul
+                        li
+                        li
+                        li
+                        li
+                        li
+                        li
+                        li
+                        li
+            .navigation
+                button.clicked suveniri
+                button modeliranje
+                button kontakt
+            .presentation#suveniri
+                .cover
+                    ul
+                        li#suveniri1
+                            img(src="images/suveniri/1.jpg")
+                        li#suveniri2
+                            img(src="images/suveniri/2.jpg")
+                        li#suveniri3
+                            img(src="images/suveniri/3.jpg")
+                        li#suveniri4
+                            img(src="images/suveniri/4.jpg")
+                .gallery
+                    button(data-id="suveniri1").item
+                    button(data-id="suveniri2").item
+                    button(data-id="suveniri3").item
+                    button(data-id="suveniri4").item
+                    a(href="../gallery/index.html", target="_blank").item
+                        .galerija
+                            h2 Galerija
+                            h2 Suvenira
+                            img(src="images/right-arrow.png", alt="")
+            .presentation#modeliranje
+                .cover
+                    ul
+                        li#modeliranje1
+                            img(src="images/modeliranje/1.jpg")
+                        li#modeliranje2
+                            img(src="images/modeliranje/2.jpg")
+                        li#modeliranje3
+                            img(src="images/modeliranje/3.jpg")
+                        li#modeliranje4
+                            img(src="images/modeliranje/4.jpg")
+                    .contact#kontakt
+                        .biggerblock    
+                            .block
+                                h2 Suveniri:
+                                h3 Danijela 0669602144
+                                h3 Danijela 062662160
+                            .block    
+                                h2 Modeliranje:
+                                h3 Zoran 0644735719
+                        .block
+                            h2 Radno Vreme
+                            h3 9:00 - 21:00
+                .gallery
+                    button(data-id="modeliranje1").item
+                    button(data-id="modeliranje2").item
+                    button(data-id="modeliranje3").item
+                    button(data-id="modeliranje4").item
+                    a(href="../gallery/index.html", target="_blank").item
+                        .galerija
+                            h2 Galerija
+                            h2 Modela
+                            img(src="images/right-arrow.png", alt="")
+            .contactus
+                .info
+                    .contactblock
+                        h2 Suveniri:
+                        h3 Danijela 0669602144
+                        h3 Danijela 062662160
+                    .contactblock
+>>>>>>> a611760f81665103d28cb3e2484f8b4c354ccc33
                         h2 Modeliranje:
                         p Zoran 0644735719
                     button#exit
