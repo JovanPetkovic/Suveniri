@@ -6,7 +6,7 @@ var path = require('path');
 module.exports = {
     entry: "./src/index/js/entry.js",
     output: {
-        path: __dirname + "/dist/index",
+        path: __dirname + "/dist",
         filename: "main.js"
     },
     module: {
@@ -25,11 +25,11 @@ module.exports = {
                 loaders: ['html-loader','pug-html-loader']
             },
             {
-                test: /\.(jpe?g|png|gif|svg)$/i,
+                test: /\.(jpe?g|png|gif|svg|ico)$/i,
                 exclude: /(node_modules|bower_components)/,
                 use:
                 [
-                    'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+                    'file-loader?name=images/[name].[ext]',
                     {
                         loader: 'image-webpack-loader',
                         options: {

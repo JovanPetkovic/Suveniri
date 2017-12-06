@@ -4,6 +4,26 @@ button
         cursor: pointer
 .hidden
     display: none
+#modal
+    transition: all 0.5s
+    background-color: Transparent
+    color: white
+    a
+        transition: all 0.5s
+        color: white
+        background-color: transparent
+        &:nth-of-type(2)
+            color: #333
+            background-color: white
+        &:hover
+            background-color: white
+            color: #333
+    button
+        transition: all 0.5s
+        color: white
+        &:hover
+            background-color: white
+            color: #333
 div.nav-scroll
     transition: all 0.5s
     color: #333
@@ -17,7 +37,7 @@ div.nav-scroll
         transition: all 0.5s
         color: #333
         background-color: transparent
-        &:nth-of-type(1)
+        &:nth-of-type(2)
             color: white
             background-color: #333
         &:hover
@@ -73,7 +93,7 @@ div.nav-scroll
         transition: all 0.5s
         border-radius: 10px
         padding: 5px 10px
-        &:nth-of-type(1)
+        &:nth-of-type(2)
             background-color: white
             color: #333
         color: white

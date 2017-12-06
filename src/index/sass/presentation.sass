@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans')
+@keyframes show
+    from
+        opacity: 0
+    to
+        opacity: 1
 .presentation
     font-family: "Open Sans", 'sans-serif'
     background-color: white
@@ -7,39 +12,46 @@
     display: flex
     flex-direction: column
     align-items: center
-    .pictures
+    .gallery
+        position: relative
         width: 100%
-        display: flex
-        flex-wrap: wrap
-        justify-content: center
-        img
-            width: 180px
-            height: 180px
-            margin: 10px
+        .pictures
+            background-color: Transparent
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            img
+                width: 180px
+                height: 170px
+                margin: 10px
     .text
         text-align: center
+        p
+            margin: 5px
         h1
             margin-bottom: 5px
-    .buttons
-        button
-            font-family: "Open Sans", 'sans-serif'
-            margin: 6px
-            background-color: white
-            outline: none
-            border: 1px grey solid
-            font-size: 95%
-        .clicked
-            background-color: #006699
-            color: white
-            border: 1px #006699 solid
     .exit
         font-family: "Open Sans", 'sans-serif'
         color: #006699
         margin: 10px
+        margin-bottom: 30px
         background-color: white
         border: none
-        width: 150px
         font-size: 20px
+        text-decoration: none
+.buttons
+    button
+        font-family: "Open Sans", 'sans-serif'
+        margin: 6px
+        background-color: white
+        outline: none
+        border: 1px grey solid
+        font-size: 95%
+    .clicked
+        background-color: #006699
+        color: white
+        border: 1px #006699 solid
 .show
     display: none
     position: absolute
@@ -65,8 +77,58 @@
     img
         transition: 0.5s all
         filter: brightness(30%)
-
-
-
-
-
+.imgshow
+    transition: 0.5s all
+    height: 70vh
+    width: auto
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    z-index: 3
+.modal
+    opacity: 0
+    background : rgba(0,0,0,0.7)
+    z-index: 2
+    top: 0
+    left: 0
+    display: none
+    height: 100vh
+    width: 100vw
+    position: fixed
+    transition: 0.5s all
+.stop-scrolling
+    height: 100%
+    overflow: hidden;
+.classic-show
+    animation-name: show
+    animation-duration: 0.5s
+    animation-iteration-count: 1
+.animation-show
+    animation-name: show
+    animation-duration: 0.5s
+    animation-iteration-count: 1
+    animation-timing-function: ease-in-out
+    animation-direction: normal
+    animation-fill-mode: forwards
+.animation-hide
+    animation-name: show
+    animation-duration: 0.5s
+    animation-iteration-count: 1
+    animation-timing-function: ease-in-out
+    animation-direction: reverse
+    animation-fill-mode: forwards
+.modeli
+    top: 0
+    left: 0
+    position: absolute
+    visibility: hidden
+    .imgbox
+        opacity: 0
+.suveniri
+    top: 0
+    left: 0
+    position: absolute
+    visibility: hidden
+    .imgbox
+        opacity: 0

@@ -1,7 +1,6 @@
-var $ = require("jquery");
+var $ = require('jquery');
 $(function(){
-    var $down = $('.landing').find('button');
-    var $nav = $('.nav');
+	var $nav = $('.nav');
     $(window).on('scroll',function(){
         var wScroll = $(window).scrollTop();
         window.requestAnimationFrame(function(){
@@ -12,15 +11,10 @@ $(function(){
                 $nav.removeClass('nav-scroll');
             }
         });
-    })
-    $down.on('click',function(){
-        console.log('hey');
-        $('body').animate({scrollTop : window.innerHeight -$nav.height() + 50}, 1000);
-    })
+    });
     var $contactBtn = $($('.links').find('button')[0]);
     var $contact = $('.links').find('.contact');
     var $contactExit = $('.contact').find('button');
-    console.log($contactBtn);
     $contact.css({
             display: 'flex'
         }).hide().css({
@@ -31,5 +25,5 @@ $(function(){
         $contactExit.on('click', function(){
             $contact.slideUp(500);
         })
-    })
+    });
 })

@@ -2,23 +2,28 @@ doctype
 html
     head
         meta(charset="utf-8")
-        meta(name="decritpion",content="Suveniri i Modeli")
+        meta(name="Descritpion",content="Ručno rađeni, unikatni suveniri svih vrsta")
         meta(name="author", content="Jovan Petković")
-        title Suveniri i Modeliranje
+        title DnD Suveniri
+        meta(property="og:image", content="./images/suveniri-facebook.jpg")
+        meta(property="og:type", content="website")
+        meta(property="og:url", content="http://www.suveniri.ga")
+        meta(property="og:title", content="DnD Suveniri")
+        meta(property="og:description", content="Ručno rađeni, unikatni suveniri svih vrsta")
         link(href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet")
         link(href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet")
     body
         .nav
             img(src="images/logo.png")
             .links
-                a(href="#home") Home
-                a(href="#galerija", target="_blank") galerija
+                a(href="#" disabled="disabled") Home
+                a(href="/gallery", target="_blank") galerija
                 button kontakt
                 .contact
                     .contactbox
                         h2 Suveniri:
                         p Danijela 0669602144
-                        p Danijela
+                        p Danijela 062662160
                     .contactbox
                         h2 Modeliranje
                         p Zoran 0644735719
@@ -38,36 +43,88 @@ html
         .presentation
             .text
                 h1 Galerija
-                p Lorem ipsum dolor sit amet
+                p Veliki izbor unikatnih suvenira svih vrsta
             .buttons
-                button.clicked Sve
-                button Suveniri
-                button Modeli
-            .pictures
-                .imgbox
-                    img(src="./images/suveniri/1.jpg")
-                    button.show
-                .imgbox
-                    img(src="./images/modeliranje/1.jpg")
-                    button.show
-                .imgbox
-                    img(src="./images/suveniri/2.jpg")
-                    button.show
-                .imgbox
-                    img(src="./images/modeliranje/2.jpg")
-                    button.show
-                .imgbox
-                    img(src="./images/suveniri/3.jpg")
-                    button.show
-                .imgbox
-                    img(src="./images/modeliranje/3.jpg")
-                    button.show
-                .imgbox
-                    img(src="./images/modeliranje/4.jpg")
-                    button.show
-                .imgbox
-                    img(src="./images/suveniri/4.jpg")
-                    button.show
-            button.exit Prikaži više
-    script.
-        document.write('<style>.contact { display: none; }</style>');
+                button(data-class="all" disabled="disabled").clicked Sve
+                button(data-class="suveniri") Suveniri
+                button(data-class="modeli") Modeli
+            .gallery
+                .pictures.all
+                    .imgbox
+                        img(src="./images/suveniri/suveniri-ostrog-1.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/modeliranje/suveniri-piksle-more-1.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/suveniri/suveniri-piksle-2.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/modeliranje/suveniri-sidro-more-2.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/suveniri/suveniri-medice-banje-3.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/modeliranje/suveniri-gocko-banje-3.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/modeliranje/suveniri-kornjace-banje-4.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/suveniri/suveniri-piksle-more-4.jpg")
+                        button.show
+                .pictures.suveniri    
+                    .imgbox
+                        img(src="./images/suveniri/suveniri-ostrog-1.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/suveniri/suveniri-piksle-2.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/suveniri/suveniri-medice-banje-3.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/suveniri/suveniri-piksle-more-4.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/suveniri/suveniri-piksle-5.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/suveniri/suveniri-magneti-6.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/suveniri/suveniri-gocko-banje-7.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/suveniri/suveniri-etno-8.jpg")
+                        button.show
+                .pictures.modeli
+                    .imgbox
+                        img(src="./images/modeliranje/suveniri-piksle-more-1.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/modeliranje/suveniri-sidro-more-2.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/modeliranje/suveniri-gocko-banje-3.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/modeliranje/suveniri-kornjace-banje-4.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/modeliranje/suveniri-banje-5.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/modeliranje/suveniri-medice-banje-6.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/modeliranje/suveniri-ostrog-more-7.jpg")
+                        button.show
+                    .imgbox
+                        img(src="./images/modeliranje/suveniri-more-8.jpg")
+                        button.show
+
+            a(href="/gallery").exit Prikaži više
+        .modal
+            img.imgshow

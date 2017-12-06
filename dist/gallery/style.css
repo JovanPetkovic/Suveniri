@@ -1,37 +1,81 @@
-.modalbox {
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,700);@keyframes show {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.show {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  z-index: 1;
+  transform: translate(-16px, -16px);
+  background-image: url(images/expand.png);
+  background-color: transparent;
+  background-size: 100%;
+  border: none; }
+  .show:focus {
+    outline: none; }
+
+.imgbox {
+  position: relative; }
+
+.hover .show {
+  transition: 0.5s all;
+  display: block; }
+
+.hover img {
+  transition: 0.5s all;
+  filter: brightness(30%); }
+
+.imgshow {
+  transition: 0.5s all;
+  height: 70vh;
+  width: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3; }
+
+.modal {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
   top: 0;
   left: 0;
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
   display: none;
-  vertical-align: middle;
-  align-text: center;
-  background-color: rgba(0, 0, 0, 0.7); }
-  .modalbox img {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    display: none;
-    margin: auto auto;
-    height: 70%;
-    max-width: 1200px; }
-  .modalbox button {
-    border: none;
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    background-color: Transparent;
-    background-image: url(3fc2a4a41affe1bf9b4f2ad6f004a5c3.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    height: 80px;
-    width: 80px; }
-    .modalbox button:focus {
-      outline: none; }
-    .modalbox button:hover {
-      cursor: pointer; }
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  transition: 0.5s all; }
+
+.classic-show {
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1; }
+
+.animation-show {
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+  animation-fill-mode: forwards; }
+
+.animation-hide {
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-direction: reverse;
+  animation-fill-mode: forwards; }
+
+body.noscroll {
+  overflow: hidden; }
 
 @font-face {
   font-family: "AfterSchool";
@@ -43,7 +87,7 @@
   flex-direction: column; }
   .section .cover {
     background-position: 0 0;
-    background-size: 100%;
+    background-size: 100% auto;
     background-repeat: no-repeat;
     position: relative;
     width: 100%;
@@ -67,455 +111,168 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center; }
-    .section .gallery .item {
+    .section .gallery img {
       margin: 5px;
       width: 200px;
       height: 200px; }
-    .section .gallery button {
-      background-size: 100% 100%;
-      border: none; }
-      .section .gallery button:focus {
-        outline: none; }
-      .section .gallery button:hover {
-        cursor: pointer; }
-    .section .gallery button[data-id="etnomodeli1"] {
-      background-image: url(4e98e7ffc03f3dd33200fd7ab2c1943c.jpg); }
-    .section .gallery button[data-id="etnomodeli2"] {
-      background-image: url(53bacfc00acebc9857937d0e98edfa1f.jpg); }
-    .section .gallery button[data-id="etnomodeli3"] {
-      background-image: url(592f6675c95a26a9d8e739a759f38ec0.jpg); }
-    .section .gallery button[data-id="etnomodeli4"] {
-      background-image: url(5257206a8949763420c77e8256c0a9de.jpg); }
-    .section .gallery button[data-id="etnomodeli5"] {
-      background-image: url(c4ef1c00dfeb5d8f528f81eddcc3a86d.jpg); }
-    .section .gallery button[data-id="etnomodeli6"] {
-      background-image: url(00515aab35fbb470df69428fd1f0da41.jpg); }
-    .section .gallery button[data-id="etnomodeli7"] {
-      background-image: url(092016c2d7ddb8b99b2e9b5f88ed4823.jpg); }
-    .section .gallery button[data-id="etnomodeli8"] {
-      background-image: url(11adba592d5a17e20a3e5b7292f748ca.jpg); }
-    .section .gallery button[data-id="etnomodeli9"] {
-      background-image: url(25af496c5cba61dad6b6e5a260c7de8b.jpg); }
-    .section .gallery button[data-id="etnomodeli10"] {
-      background-image: url(02a86da355a722ff3620fa8341d0f184.jpg); }
-    .section .gallery button[data-id="etnomodeli11"] {
-      background-image: url(8ca5dd776cfb58ca958a0d4e660914fe.jpg); }
-    .section .gallery button[data-id="etnomodeli12"] {
-      background-image: url(c3e4ef50e986d17031a557b910421412.jpg); }
-    .section .gallery button[data-id="etnomodeli13"] {
-      background-image: url(daf4e52a29aa4b6f019b9b3a934ad86e.jpg); }
-    .section .gallery button[data-id="etnomodeli14"] {
-      background-image: url(1cdd45b5b2696a5dc796c7697cc8c8db.jpg); }
-    .section .gallery button[data-id="etnomodeli15"] {
-      background-image: url(0b0f7a76b3d146eaa650dd6ed9e89994.jpg); }
-    .section .gallery button[data-id="etnomodeli16"] {
-      background-image: url(c2fc40339559ff585e66192b5438660d.jpg); }
-    .section .gallery button[data-id="etnomodeli17"] {
-      background-image: url(1991f59991a364d597435fd982f03476.jpg); }
-    .section .gallery button[data-id="etnomodeli18"] {
-      background-image: url(4cbc5e990777e3f1328204070a5b1fe8.jpg); }
-    .section .gallery button[data-id="etnomodeli19"] {
-      background-image: url(322cbf9b22e6c3c086c28fd525d975e1.jpg); }
-    .section .gallery button[data-id="etnomodeli20"] {
-      background-image: url(c487794ddaba87da9cccd54e7049b265.jpg); }
-    .section .gallery button[data-id="etnomodeli21"] {
-      background-image: url(d3947e5c88f5ae0ae27a7b86710306af.jpg); }
-    .section .gallery button[data-id="etnomodeli22"] {
-      background-image: url(79df601dd04037744f286a8cbf5a8d7d.jpg); }
-    .section .gallery button[data-id="etnomodeli23"] {
-      background-image: url(b9a04007f99f5f5472352a34b307768b.jpg); }
-    .section .gallery button[data-id="etnomodeli24"] {
-      background-image: url(a09f4a192c7360911281cbb362fe05a3.jpg); }
-    .section .gallery button[data-id="etnomodeli25"] {
-      background-image: url(dfe7297cdf2962ad79501d40b181ba4a.jpg); }
-    .section .gallery button[data-id="etnomodeli26"] {
-      background-image: url(60732f8ba5abd36e85fc0a5535826f85.jpg); }
-    .section .gallery button[data-id="etnomodeli27"] {
-      background-image: url(a660444c573fe699b340496c824d5ddd.jpg); }
-    .section .gallery button[data-id="etnomodeli28"] {
-      background-image: url(da28f20dad1074c39629b720a2d49cf7.jpg); }
-    .section .gallery button[data-id="etnomodeli29"] {
-      background-image: url(c8d7dd2b17050d6dbef3bd769bdd4966.jpg); }
-    .section .gallery button[data-id="etnomodeli30"] {
-      background-image: url(276cc07d3961e17c7379bcdbd2cbc43c.jpg); }
-    .section .gallery button[data-id="etnomodeli31"] {
-      background-image: url(ec95d06e6458a429efba81e68441b634.jpg); }
-    .section .gallery button[data-id="etnomodeli32"] {
-      background-image: url(321669e706e37d61559fbb360e4510a8.jpg); }
-    .section .gallery button[data-id="etnomodeli33"] {
-      background-image: url(e7873c04422b8dc90ceab83deb46be4d.jpg); }
-    .section .gallery button[data-id="etnomodeli34"] {
-      background-image: url(441ca16e302d6551410b81e0971712dc.jpg); }
-    .section .gallery button[data-id="etnomodeli35"] {
-      background-image: url(cac636161ffa932e58567badc500d61c.jpg); }
-    .section .gallery button[data-id="etnomodeli36"] {
-      background-image: url(84a7848ea897d859a0fa46c8cbc7fed3.jpg); }
-    .section .gallery button[data-id="etnomodeli37"] {
-      background-image: url(d58cb0caec3ba1842397973d87b16c39.jpg); }
-    .section .gallery button[data-id="planine1"] {
-      background-image: url(4d44ac79e9efff9514434f9db6e5e99e.jpg); }
-    .section .gallery button[data-id="planine2"] {
-      background-image: url(a9b8e74e6b9803b01778917fe49b55df.jpg); }
-    .section .gallery button[data-id="planine3"] {
-      background-image: url(f53c2c97534353b724d7a4aac81fe217.jpg); }
-    .section .gallery button[data-id="planine4"] {
-      background-image: url(8660bf54b2eb52adba77b88a12fa9017.jpg); }
-    .section .gallery button[data-id="planine5"] {
-      background-image: url(f5c8da45585e1333c68e09e116517025.jpg); }
-    .section .gallery button[data-id="planine6"] {
-      background-image: url(e419f8d42aee43c7fc5205b66139d2c5.jpg); }
-    .section .gallery button[data-id="planine7"] {
-      background-image: url(dc5fb6042bf680799e05fcc190832941.jpg); }
-    .section .gallery button[data-id="planine8"] {
-      background-image: url(abaca75879d23090522405040841ec87.jpg); }
-    .section .gallery button[data-id="planine9"] {
-      background-image: url(01012763bcfff95c40ed464e1f6c1227.jpg); }
-    .section .gallery button[data-id="planine10"] {
-      background-image: url(eafcfbf2babd260b01268e9a39d4ba9c.jpg); }
-    .section .gallery button[data-id="planine11"] {
-      background-image: url(68e99628144a6d3d7591d731ac454c02.jpg); }
-    .section .gallery button[data-id="planine12"] {
-      background-image: url(607f75e648bb9659067a801e4c8a7bcc.jpg); }
-    .section .gallery button[data-id="planine13"] {
-      background-image: url(e6752c4812bbe30625f9330c1c44724c.jpg); }
-    .section .gallery button[data-id="planine14"] {
-      background-image: url(a3f1317289219bbc35316e0542788e33.jpg); }
-    .section .gallery button[data-id="planine15"] {
-      background-image: url(ea10fe9801bbe20b382250f5c31010c7.jpg); }
-    .section .gallery button[data-id="planine16"] {
-      background-image: url(3db9054096ddc22ec62cbccc2491c30c.jpg); }
-    .section .gallery button[data-id="planine17"] {
-      background-image: url(926e99b4b394fbc2c8c7c7ad9befe3da.jpg); }
-    .section .gallery button[data-id="planine18"] {
-      background-image: url(3bcb35e3273cde7f4e4953f41efb5fe5.jpg); }
-    .section .gallery button[data-id="planine19"] {
-      background-image: url(6748c5aa07a5d99c0b28f1098cf370ae.jpg); }
-    .section .gallery button[data-id="planine20"] {
-      background-image: url(f2f61f6edcfd3702e571abb8dc29cd6e.jpg); }
-    .section .gallery button[data-id="planine21"] {
-      background-image: url(c502c0390773394324e37431aad97480.jpg); }
-    .section .gallery button[data-id="planine22"] {
-      background-image: url(e82d6a3e30e289090af05de09b4f63fc.jpg); }
-    .section .gallery button[data-id="planine23"] {
-      background-image: url(192ca36199ebbd06405dbdd8b10adcf2.jpg); }
-    .section .gallery button[data-id="planine24"] {
-      background-image: url(1c982988247a17a147464e781af47cc3.jpg); }
-    .section .gallery button[data-id="planine25"] {
-      background-image: url(ca51bcfb5b70fae548b0bd3e8c45add7.jpg); }
-    .section .gallery button[data-id="planine26"] {
-      background-image: url(0b7d4cbee43a5c43a4299766fe017842.jpg); }
-    .section .gallery button[data-id="planine27"] {
-      background-image: url(a47824818c27a759d3f7740d5678ecc7.jpg); }
-    .section .gallery button[data-id="planine28"] {
-      background-image: url(c7e71802739e869c44982b2514e107da.jpg); }
-    .section .gallery button[data-id="planine29"] {
-      background-image: url(805a1660f56c02f362e84ff8554423e2.jpg); }
-    .section .gallery button[data-id="planine30"] {
-      background-image: url(ca45b270cc12361b278a21c32be85009.jpg); }
-    .section .gallery button[data-id="planine31"] {
-      background-image: url(9c1eb5c4fc0f3f58546d4363cadbf1a1.jpg); }
-    .section .gallery button[data-id="planine32"] {
-      background-image: url(a9cdcfb2902591b1024a5f7e8d1f2ee7.jpg); }
-    .section .gallery button[data-id="planine33"] {
-      background-image: url(afce2e167f2ecffe2d60349c8a8b7cee.jpg); }
-    .section .gallery button[data-id="planine34"] {
-      background-image: url(d3b89d4c250baa09b13fcbc712373493.jpg); }
-    .section .gallery button[data-id="planine35"] {
-      background-image: url(2ccd48b8bcff158220d4c05d59bfcac5.jpg); }
-    .section .gallery button[data-id="planine36"] {
-      background-image: url(7dbb49c365c05df1bb1b27f606726291.jpg); }
-    .section .gallery button[data-id="planine37"] {
-      background-image: url(d58cb0caec3ba1842397973d87b16c39.jpg); }
-    .section .gallery button[data-id="planine38"] {
-      background-image: url(18542885deb61db241c2fc20440b6c0d.jpg); }
-    .section .gallery button[data-id="planine39"] {
-      background-image: url(39f2e908bc628ff045f1d8a8b072ba1d.jpg); }
-    .section .gallery button[data-id="planine40"] {
-      background-image: url(f9998c7e6080ce7d5a6bca64d7909077.jpg); }
-    .section .gallery button[data-id="planine41"] {
-      background-image: url(6352dfc7f747405ad64871f7f1b0fae5.jpg); }
-    .section .gallery button[data-id="planine42"] {
-      background-image: url(86ad653bce69acf5f01fae7b6438cd07.jpg); }
-    .section .gallery button[data-id="planine43"] {
-      background-image: url(800e98ad624ab2181ebf1e5a611b1360.jpg); }
-    .section .gallery button[data-id="planine44"] {
-      background-image: url(66b2f05e54b07ff99a00f2063ed13c3f.jpg); }
-    .section .gallery button[data-id="planine45"] {
-      background-image: url(c8944f2f7cf2cacde6cd326cdcc683fe.jpg); }
-    .section .gallery button[data-id="planine46"] {
-      background-image: url(76366bc90b8f077e76ab60f04760f936.jpg); }
-    .section .gallery button[data-id="planine47"] {
-      background-image: url(495d1972619bc214419aaaa9f2b1b5ed.jpg); }
-    .section .gallery button[data-id="planine48"] {
-      background-image: url(34c458bf4def0f7de024af25dee7acd3.jpg); }
-    .section .gallery button[data-id="planine49"] {
-      background-image: url(5870f96457a446ffe16dacdd8ded6d5c.jpg); }
-    .section .gallery button[data-id="planine50"] {
-      background-image: url(bb444ee982e68a05ec62f6631ff81172.jpg); }
-    .section .gallery button[data-id="planine51"] {
-      background-image: url(fcc4dc50e92fc277da7ac80af3c653b4.jpg); }
-    .section .gallery button[data-id="planine52"] {
-      background-image: url(af8fc0e9f83987a3844f6d5cfaa00302.jpg); }
-    .section .gallery button[data-id="planine53"] {
-      background-image: url(86bd9d96a18dd5f7acb4e920124aa3dc.jpg); }
-    .section .gallery button[data-id="planine54"] {
-      background-image: url(d32bc0a1f3da12beb98d91811080431b.jpg); }
-    .section .gallery button[data-id="planine55"] {
-      background-image: url(c36b836b002e7c64e1fbe68ff9ab0663.jpg); }
-    .section .gallery button[data-id="planine56"] {
-      background-image: url(925e345c156a8dd76c280e20d3ca9a55.jpg); }
-    .section .gallery button[data-id="planine57"] {
-      background-image: url(da1e01529604214d6ca9dd5f64e33836.jpg); }
-    .section .gallery button[data-id="planine58"] {
-      background-image: url(dbd0cceca0e68632ea694f09124067d3.jpg); }
-    .section .gallery button[data-id="planine59"] {
-      background-image: url(733351bd64a52b89731d159d791cb9d1.jpg); }
-    .section .gallery button[data-id="planine60"] {
-      background-image: url(d83ca3c112398207c90ae1a4b3de78e9.jpg); }
-    .section .gallery button[data-id="planine61"] {
-      background-image: url(a181d0573e4f8c870f92ffa86469db01.jpg); }
-    .section .gallery button[data-id="planine62"] {
-      background-image: url(185874e7623610176fcfb61849ec5744.jpg); }
-    .section .gallery button[data-id="planine63"] {
-      background-image: url(d33f6375706f06246760724ee49964a2.jpg); }
-    .section .gallery button[data-id="morski1"] {
-      background-image: url(ba923be47695a23fb0d71eb7d9aa101a.jpg); }
-    .section .gallery button[data-id="morski2"] {
-      background-image: url(394c166a324ef354b771499ca65c5ab2.jpg); }
-    .section .gallery button[data-id="morski3"] {
-      background-image: url(17159af6fedc4037fe142ab4c64d4766.jpg); }
-    .section .gallery button[data-id="morski4"] {
-      background-image: url(912195463afddbb05da60b000a85448e.jpg); }
-    .section .gallery button[data-id="morski5"] {
-      background-image: url(092b56e6583206474f2900b9521e1829.jpg); }
-    .section .gallery button[data-id="morski6"] {
-      background-image: url(71d277c7f086200ad18e30082c35cd3a.jpg); }
-    .section .gallery button[data-id="morski7"] {
-      background-image: url(7ce4e5b0d3ff1dd6aab509094ff468ce.jpg); }
-    .section .gallery button[data-id="morski8"] {
-      background-image: url(087bfa8b43bd9585723327017a10c143.jpg); }
-    .section .gallery button[data-id="morski9"] {
-      background-image: url(30861d4245c92f80e025e24a550a8aec.jpg); }
-    .section .gallery button[data-id="morski10"] {
-      background-image: url(471400cb45dd440656f5cbe4545f09b9.jpg); }
-    .section .gallery button[data-id="morski11"] {
-      background-image: url(e06e42e97f087fdfd51f254c49c1bea0.jpg); }
-    .section .gallery button[data-id="morski12"] {
-      background-image: url(6f068b2762e2eb070c67cda523b11a3b.jpg); }
-    .section .gallery button[data-id="morski13"] {
-      background-image: url(445ba888609e78d101b794840f1db579.jpg); }
-    .section .gallery button[data-id="morski14"] {
-      background-image: url(2740b39824d2f6e661e7f7b21878cbf2.jpg); }
-    .section .gallery button[data-id="morski15"] {
-      background-image: url(a2f7c37ae3b30223e08735f3d7987515.jpg); }
-    .section .gallery button[data-id="morski16"] {
-      background-image: url(1c5b9c70238ab6ef2d9e0322cbe3725b.jpg); }
-    .section .gallery button[data-id="morski17"] {
-      background-image: url(37c30a3a7f2eab11b12bfc3dab1375b6.jpg); }
-    .section .gallery button[data-id="morski18"] {
-      background-image: url(7c0e8f8aaf416ad22d507a8995e81aa5.jpg); }
-    .section .gallery button[data-id="morski19"] {
-      background-image: url(26fa6cd622c3ee8a85d8f8cbefb400fe.jpg); }
-    .section .gallery button[data-id="morski20"] {
-      background-image: url(5c92eb96ec835e6a8e1169ab6d27fa91.jpg); }
-    .section .gallery button[data-id="morski21"] {
-      background-image: url(3261934f5258ce7f06c4059523b1819f.jpg); }
-    .section .gallery button[data-id="morski22"] {
-      background-image: url(79d3f85e32a6e4124229ae4645fdff7b.jpg); }
-    .section .gallery button[data-id="morski23"] {
-      background-image: url(a747ec819e253dcd3d903d254724b401.jpg); }
-    .section .gallery button[data-id="morski24"] {
-      background-image: url(ad40a889cee10caf9f42aad8ace8512e.jpg); }
-    .section .gallery button[data-id="morski25"] {
-      background-image: url(ec8e10ac0a22403f5c34d9b6a4ba8368.jpg); }
-    .section .gallery button[data-id="morski26"] {
-      background-image: url(40f6deb7327a550baecf1a5423858a3c.jpg); }
-    .section .gallery button[data-id="morski27"] {
-      background-image: url(0863fdec6490ac05c9d38a1d20ce0f52.jpg); }
-    .section .gallery button[data-id="morski28"] {
-      background-image: url(9e24e2e03d3121bd41be01220ceee338.jpg); }
-    .section .gallery button[data-id="morski29"] {
-      background-image: url(47ab6d64772f26277a6205b45cd01f03.jpg); }
-    .section .gallery button[data-id="morski30"] {
-      background-image: url(9c02187ab00fff598f65b675ae0da172.jpg); }
-    .section .gallery button[data-id="morski31"] {
-      background-image: url(52677773b7b651f4ba96049e6d87289c.jpg); }
-    .section .gallery button[data-id="morski32"] {
-      background-image: url(044fe71aaac722cb002ff99a97909b2b.jpg); }
-    .section .gallery button[data-id="morski33"] {
-      background-image: url(e7d96d08d4e3359435c4433977b42157.jpg); }
-    .section .gallery button[data-id="morski34"] {
-      background-image: url(30bbba0b43de6dd554636b5a739a0d07.jpg); }
-    .section .gallery button[data-id="morski35"] {
-      background-image: url(289e6c26426cf0c110f96663d8bc1e62.jpg); }
-    .section .gallery button[data-id="morski36"] {
-      background-image: url(8c5df83a02d3863a49bed13aa91087c7.jpg); }
-    .section .gallery button[data-id="morski37"] {
-      background-image: url(09f8a0cd506188e3ab7c19cdd097f410.jpg); }
-    .section .gallery button[data-id="morski38"] {
-      background-image: url(e572a8495fd8005c089c5ceaf0812149.jpg); }
-    .section .gallery button[data-id="morski39"] {
-      background-image: url(917087335d42b55724063ac5513507a7.jpg); }
-    .section .gallery button[data-id="morski40"] {
-      background-image: url(f362b296585ce7862e0fc9024e0c6e5a.jpg); }
-    .section .gallery button[data-id="morski41"] {
-      background-image: url(c36b836b002e7c64e1fbe68ff9ab0663.jpg); }
-    .section .gallery button[data-id="piksle1"] {
-      background-image: url(e42e16f741bc36f9c830ac3dbde447b7.jpg); }
-    .section .gallery button[data-id="piksle2"] {
-      background-image: url(f487684acc8e1961764786afdd1531d8.jpg); }
-    .section .gallery button[data-id="piksle3"] {
-      background-image: url(f5c8da45585e1333c68e09e116517025.jpg); }
-    .section .gallery button[data-id="piksle4"] {
-      background-image: url(ce340f49257a0742531a9094ea36052f.jpg); }
-    .section .gallery button[data-id="piksle5"] {
-      background-image: url(17da743d3e6251763fe8250f286057d0.jpg); }
-    .section .gallery button[data-id="piksle6"] {
-      background-image: url(b96abaadb785200213e88dfd41226c83.jpg); }
-    .section .gallery button[data-id="piksle7"] {
-      background-image: url(092b56e6583206474f2900b9521e1829.jpg); }
-    .section .gallery button[data-id="piksle8"] {
-      background-image: url(71d277c7f086200ad18e30082c35cd3a.jpg); }
-    .section .gallery button[data-id="piksle9"] {
-      background-image: url(bd8ab8157f1e0392f0b05727d379bc7e.jpg); }
-    .section .gallery button[data-id="piksle10"] {
-      background-image: url(394c166a324ef354b771499ca65c5ab2.jpg); }
-    .section .gallery button[data-id="piksle11"] {
-      background-image: url(7a0e8199d941258478477fa84ef307a6.jpg); }
-    .section .gallery button[data-id="piksle12"] {
-      background-image: url(bb1d2a3c33f7931f4c3d9ee88c4c18b3.jpg); }
-    .section .gallery button[data-id="piksle13"] {
-      background-image: url(f53c2c97534353b724d7a4aac81fe217.jpg); }
-    .section .gallery button[data-id="piksle14"] {
-      background-image: url(aa90c8dcc205f6964a0a7a04feccfbf4.jpg); }
-    .section .gallery button[data-id="piksle15"] {
-      background-image: url(564f329126b0b780d1a635e61e270363.jpg); }
-    .section .gallery button[data-id="piksle16"] {
-      background-image: url(baf83902a185cfccdb29bebf11aeda57.jpg); }
-    .section .gallery button[data-id="piksle17"] {
-      background-image: url(f791c83ee9cde75f6b1745acd586d489.jpg); }
-    .section .gallery button[data-id="piksle18"] {
-      background-image: url(6b414fd9e72414d8f786ef8c9544f25c.jpg); }
-    .section .gallery button[data-id="piksle19"] {
-      background-image: url(26fa6cd622c3ee8a85d8f8cbefb400fe.jpg); }
-    .section .gallery button[data-id="piksle20"] {
-      background-image: url(5c92eb96ec835e6a8e1169ab6d27fa91.jpg); }
-    .section .gallery button[data-id="piksle21"] {
-      background-image: url(79d3f85e32a6e4124229ae4645fdff7b.jpg); }
-    .section .gallery button[data-id="piksle22"] {
-      background-image: url(47ab6d64772f26277a6205b45cd01f03.jpg); }
-    .section .gallery button[data-id="piksle23"] {
-      background-image: url(d32bc0a1f3da12beb98d91811080431b.jpg); }
-    .section .gallery button[data-id="piksle24"] {
-      background-image: url(21de078ed8941ac52e1adfad75ea06d8.jpg); }
-    .section .gallery button[data-id="piksle25"] {
-      background-image: url(d33f6375706f06246760724ee49964a2.jpg); }
-    .section .gallery button[data-id="piksle26"] {
-      background-image: url(185874e7623610176fcfb61849ec5744.jpg); }
-    .section .gallery button[data-id="crkve1"] {
-      background-image: url(d131174c165a7f70b879f173b01ca1b0.jpg); }
-    .section .gallery button[data-id="crkve2"] {
-      background-image: url(8926fbc30fd7ebb7513ec86a022acf1b.jpg); }
-    .section .gallery button[data-id="crkve3"] {
-      background-image: url(e3f240e65a0cca921a3bb7877207f490.jpg); }
-    .section .gallery button[data-id="crkve4"] {
-      background-image: url(4f1399e28d3126f0eacda722fc2308b3.jpg); }
-    .section .gallery button[data-id="crkve5"] {
-      background-image: url(135cb279f1c3565934c98a29499e27ca.jpg); }
-    .section .gallery button[data-id="crkve6"] {
-      background-image: url(00dc803a86df56c1168a7b313ec0d49b.jpg); }
-    .section .gallery button[data-id="crkve7"] {
-      background-image: url(ceb2b40dd4feb1e9e565b897650cf972.jpg); }
-    .section .gallery button[data-id="magneti1"] {
-      background-image: url(43d2c5b1dcae0da925563847e51a189f.jpg); }
-    .section .gallery button[data-id="magneti2"] {
-      background-image: url(524de2fe97e588223fe93bf778ead50d.jpg); }
-    .section .gallery button[data-id="magneti3"] {
-      background-image: url(dc84c12fe0ccdc573a3e4a08eb1ae64f.jpg); }
-    .section .gallery button[data-id="magneti4"] {
-      background-image: url(1a17f43baa38deb6b0c2904da98f4177.jpg); }
-    .section .gallery button[data-id="magneti5"] {
-      background-image: url(8e4c006018c16ba209104b6aa10414e8.jpg); }
-    .section .gallery button[data-id="magneti6"] {
-      background-image: url(2a568fb375ae0a30013daa5307e96840.jpg); }
-    .section .gallery button[data-id="magneti7"] {
-      background-image: url(a67cb8660da4d152d2da3e0474854813.jpg); }
-    .section .gallery button[data-id="magneti8"] {
-      background-image: url(bc3f48dc839846eeb8f3f71d34595715.jpg); }
-    .section .gallery button[data-id="magneti9"] {
-      background-image: url(2080fd268acb22d7a1523436e0289a72.jpg); }
-    .section .gallery button[data-id="magneti10"] {
-      background-image: url(0b403514cad0a6b837221be494dce80d.jpg); }
-    .section .gallery button[data-id="magneti11"] {
-      background-image: url(fd6c0b2d541e6e1c0b636a20662b7429.jpg); }
-    .section .gallery button[data-id="magneti12"] {
-      background-image: url(e06352f47c34018a9f2df61e169871f4.jpg); }
-    .section .gallery button[data-id="magneti13"] {
-      background-image: url(58ccab823a5241243649d5588a1fef44.jpg); }
-    .section .gallery button[data-id="magneti14"] {
-      background-image: url(3b8e9b2c4c0ce18e2732eee1129e962f.jpg); }
-    .section .gallery button[data-id="izrada1"] {
-      background-image: url(fb837869ed8108fc5e0068457b0e9b65.jpg); }
-    .section .gallery button[data-id="izrada2"] {
-      background-image: url(c9227cddd9347f26c13e2649914fb859.jpg); }
-    .section .gallery button[data-id="izrada3"] {
-      background-image: url(f2d1205c73455a844a502b5eadc40943.jpg); }
-    .section .gallery button[data-id="izrada4"] {
-      background-image: url(343d91274ced625839c5188e5908c1cc.jpg); }
-    .section .gallery button[data-id="izrada5"] {
-      background-image: url(8ac5b3e0497481c93950785bf0e0e07f.jpg); }
-    .section .gallery button[data-id="izrada6"] {
-      background-image: url(d352af25bcf4e6224303d3641f08d33c.jpg); }
-    .section .gallery button[data-id="izrada7"] {
-      background-image: url(e7dba3ff6ce16a52e647a515b635eaff.jpg); }
-    .section .gallery button[data-id="izrada8"] {
-      background-image: url(fb4dea7d64b064bfe72a633e8048d77d.jpg); }
-    .section .gallery button[data-id="izrada9"] {
-      background-image: url(1648f2052549f019818e1611ecc242bf.jpg); }
-    .section .gallery button[data-id="izrada10"] {
-      background-image: url(fb5aef1406d18136a01b860be58d2774.jpg); }
-    .section .gallery button[data-id="izrada11"] {
-      background-image: url(c8a6ab0e6c087bd2329f923819a48445.jpg); }
-    .section .gallery button[data-id="izrada12"] {
-      background-image: url(f5f0a54a601e25f8c834d0af774799af.jpg); }
-    .section .gallery button[data-id="izrada13"] {
-      background-image: url(4a621ae699fbcfafc644a98a166626c7.jpg); }
-    .section .gallery button[data-id="izrada14"] {
-      background-image: url(50127caa82cc10c21472101e587fdccd.jpg); }
-    .section .gallery button[data-id="izrada15"] {
-      background-image: url(b30b1005b4328970ec687465924314d2.jpg); }
-    .section .gallery button[data-id="izrada16"] {
-      background-image: url(d439af3926fb878427499ac2ae7253cf.jpg); }
-    .section .gallery button[data-id="izrada17"] {
-      background-image: url(d21b8de5a8632d9322e4e363f261dae2.jpg); }
-    .section .gallery button[data-id="izrada18"] {
-      background-image: url(024c9427accfef138a75c9254857a834.jpg); }
-    .section .gallery button[data-id="izrada19"] {
-      background-image: url(e231a1e4394147da827fab639f946fb3.jpg); }
 
-#etnomodeli .cover {
-  background-image: url(fd2fd0f5895f5c4102b288ff77fe71bd.jpg); }
+#etno .cover {
+  background-image: url(images/suveniri-etno-cover.jpg); }
 
 #planine .cover {
-  background-image: url(d4ef5a71cce0f653084b50971a381c5f.jpg); }
+  background-image: url(images/suveniri-banje-cover.jpg); }
 
 #morski .cover {
-  background-image: url(d9afae54135551e0ea9510fe3377ae34.jpg); }
+  background-image: url(images/suveniri-more-cover.jpg); }
 
 #piksle .cover {
-  background-image: url(1abef506c456b3593dd406ab3942c7cc.jpg); }
+  background-image: url(images/suveniri-piksle-cover.jpg); }
 
 #crkve .cover {
-  background-image: url(0e2f1110255d3467fc6d3c7c854d96dd.jpg); }
+  background-image: url(images/suveniri-crkve-cover.jpg); }
 
 #magneti .cover {
-  background-image: url(858aa083014716cdbbc90fc53ae32b91.jpg); }
+  background-image: url(images/suveniri-magneti-cover.jpg); }
 
 #izrada .cover {
-  background-image: url(e4cf77174f8f46468bf7e8de2142bf33.jpg); }
+  background-image: url(images/suveniri-izrada-cover.jpg); }
+
+button:hover {
+  cursor: pointer; }
+
+.hidden {
+  display: none; }
+
+#modal {
+  transition: all 0.5s;
+  background-color: Transparent;
+  color: white; }
+  #modal a {
+    transition: all 0.5s;
+    color: white;
+    background-color: transparent; }
+    #modal a:nth-of-type(2) {
+      color: #333;
+      background-color: white; }
+    #modal a:hover {
+      background-color: white;
+      color: #333; }
+  #modal button {
+    transition: all 0.5s;
+    color: white; }
+    #modal button:hover {
+      background-color: white;
+      color: #333; }
+
+div.nav-scroll {
+  transition: all 0.5s;
+  color: #333;
+  background-color: white; }
+  div.nav-scroll img {
+    transition: all 0.5s;
+    height: 80%;
+    align-self: auto;
+    margin-top: 0; }
+  div.nav-scroll a {
+    transition: all 0.5s;
+    color: #333;
+    background-color: transparent; }
+    div.nav-scroll a:nth-of-type(2) {
+      color: white;
+      background-color: #333; }
+    div.nav-scroll a:hover {
+      background-color: #333;
+      color: white; }
+  div.nav-scroll button {
+    transition: all 0.5s;
+    color: #333; }
+    div.nav-scroll button:hover {
+      background-color: #333;
+      color: white; }
+
+.nav {
+  transition: all 0.5s;
+  height: 100px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Dosis", 'sans-serif';
+  font-weight: 700;
+  align-items: center;
+  justify-content: space-between;
+    justify-content-margin-left: 50px; }
+  .nav .links {
+    margin-right: 50px;
+    position: relative; }
+  .nav img {
+    transition: all 0.5s;
+    align-self: flex-start;
+    height: 200px;
+    margin-left: 80px;
+    margin-top: 20px; }
+  .nav button {
+    outline: none;
+    transition: all 0.5s;
+    font-family: "Dosis", 'sans-serif';
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-left: 30px;
+    border: none;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 5px 10px; }
+    .nav button:hover {
+      background-color: white;
+      color: #333; }
+  .nav a {
+    transition: all 0.5s;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    margin-left: 30px; }
+    .nav a:nth-of-type(2) {
+      background-color: white;
+      color: #333; }
+    .nav a:hover {
+      background-color: white;
+      color: #333; }
+
+.contact {
+  visibility: hidden;
+  display: flex;
+  position: absolute;
+  margin-top: 35px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  font-size: 16px;
+  background-color: white; }
+  .contact .contactbox {
+    margin: 10px;
+    height: 100%; }
+  .contact #exit {
+    color: black;
+    position: absolute;
+    background-color: Transparent;
+    background-size: contain;
+    margin: 3px;
+    width: 24px;
+    height: 24px;
+    border-radius: 0;
+    right: 0%;
+    top: 0%;
+    background-image: url(images/delete-black.png);
+    outline: none; }
 
 body, html {
-  max-width: 1280px;
+  width: 100%;
   margin: 0;
-  padding: 0;
-  height: 2000px; }
+  padding: 0; }

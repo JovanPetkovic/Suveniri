@@ -1,0 +1,338 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:400,700);@import url(https://fonts.googleapis.com/css?family=Open+Sans);.hidden {
+  display: none; }
+
+button:hover {
+  cursor: pointer; }
+button:hover {
+  cursor: pointer; }
+
+.hidden {
+  display: none; }
+
+div.nav-scroll {
+  transition: all 0.5s;
+  color: #333;
+  background-color: white; }
+  div.nav-scroll img {
+    transition: all 0.5s;
+    height: 80%;
+    align-self: auto;
+    margin-top: 0; }
+  div.nav-scroll a {
+    transition: all 0.5s;
+    color: #333;
+    background-color: transparent; }
+    div.nav-scroll a:nth-of-type(1) {
+      color: white;
+      background-color: #333; }
+    div.nav-scroll a:hover {
+      background-color: #333;
+      color: white; }
+  div.nav-scroll button {
+    transition: all 0.5s;
+    color: #333; }
+    div.nav-scroll button:hover {
+      background-color: #333;
+      color: white; }
+
+.nav {
+  transition: all 0.5s;
+  height: 100px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Dosis", 'sans-serif';
+  font-weight: 700;
+  align-items: center;
+  justify-content: space-between;
+    justify-content-margin-left: 50px; }
+  .nav .links {
+    margin-right: 50px;
+    position: relative; }
+  .nav img {
+    transition: all 0.5s;
+    align-self: flex-start;
+    height: 200px;
+    margin-left: 80px;
+    margin-top: 20px; }
+  .nav button {
+    outline: none;
+    transition: all 0.5s;
+    font-family: "Dosis", 'sans-serif';
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-left: 30px;
+    border: none;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 5px 10px; }
+    .nav button:hover {
+      background-color: white;
+      color: #333; }
+  .nav a {
+    transition: all 0.5s;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    margin-left: 30px; }
+    .nav a:nth-of-type(1) {
+      background-color: white;
+      color: #333; }
+    .nav a:hover {
+      background-color: white;
+      color: #333; }
+
+.contact {
+  visibility: hidden;
+  display: flex;
+  position: absolute;
+  margin-top: 35px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  font-size: 16px;
+  background-color: white; }
+  .contact .contactbox {
+    margin: 10px;
+    height: 100%; }
+  .contact #exit {
+    color: black;
+    position: absolute;
+    background-color: Transparent;
+    background-size: contain;
+    margin: 3px;
+    width: 24px;
+    height: 24px;
+    border-radius: 0;
+    right: 0%;
+    top: 0%;
+    background-image: url(images/delete-black.png);
+    outline: none; }
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; }
+
+@keyframes bounce {
+  20% {
+    bottom: 40px; }
+  30% {
+    bottom: 0px; }
+  40% {
+    bottom: 10px; }
+  50% {
+    bottom: 0px; }
+  100% {
+    bottom: 0px; } }
+
+.landing {
+  height: 100vh;
+  display: flex;
+  flex-direction: column; }
+  .landing .slider {
+    position: relative;
+    flex: 1; }
+    .landing .slider ul {
+      width: 100%;
+      padding: 0;
+      height: 100%;
+      margin: 0;
+      list-style-type: none; }
+      .landing .slider ul li {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: inline-block; }
+        .landing .slider ul li:nth-of-type(1) {
+          background: linear-gradient(transparent, rgba(0, 0, 0, 0.3)), url(images/suveniri-gocko-1.jpg);
+          background-size: 100% 100%; }
+        .landing .slider ul li:nth-of-type(2) {
+          background: linear-gradient(transparent, rgba(0, 0, 0, 0.3)), url(images/suveniri-opanci-2.jpg);
+          background-size: 100% 100%; }
+        .landing .slider ul li:nth-of-type(3) {
+          background: linear-gradient(transparent, rgba(0, 0, 0, 0.3)), url(images/suveniri-etno-3.jpg);
+          background-size: 100% 100%; }
+        .landing .slider ul li:nth-of-type(4) {
+          background: linear-gradient(transparent, rgba(0, 0, 0, 0.3)), url(images/suveniri-izrada-4.jpg);
+          background-size: 100% 100%; }
+        .landing .slider ul li:nth-of-type(5) {
+          background: linear-gradient(transparent, rgba(0, 0, 0, 0.3)), url(images/suveniri-opanak-5.jpg);
+          background-size: 100% 100%; }
+        .landing .slider ul li:nth-of-type(6) {
+          background: linear-gradient(transparent, rgba(0, 0, 0, 0.3)), url(images/suveniri-etno-6.jpg);
+          background-size: 100% 100%; }
+        .landing .slider ul li:nth-of-type(7) {
+          background: linear-gradient(transparent, rgba(0, 0, 0, 0.3)), url(images/suveniri-izrada-7.jpg);
+          background-size: 100% 100%; }
+        .landing .slider ul li:nth-of-type(8) {
+          background: linear-gradient(transparent, rgba(0, 0, 0, 0.3)), url(images/suveniri-piksle-8.jpg);
+          background-size: 100% 100%; }
+  .landing button {
+    animation-name: bounce;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    margin-bottom: 30px;
+    width: 32px;
+    height: 32px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    transform: translate(-16px);
+    bottom: 0%;
+    border: none;
+    background-image: url(images/down-arrow.png);
+    background-size: 100% 100%;
+    background-color: transparent; }
+@keyframes show {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.presentation {
+  font-family: "Open Sans", 'sans-serif';
+  background-color: white;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .presentation .gallery {
+    position: relative;
+    width: 100%; }
+    .presentation .gallery .pictures {
+      background-color: Transparent;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .presentation .gallery .pictures img {
+        width: 180px;
+        height: 170px;
+        margin: 10px; }
+  .presentation .text {
+    text-align: center; }
+    .presentation .text p {
+      margin: 5px; }
+    .presentation .text h1 {
+      margin-bottom: 5px; }
+  .presentation .exit {
+    font-family: "Open Sans", 'sans-serif';
+    color: #006699;
+    margin: 10px;
+    margin-bottom: 30px;
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    text-decoration: none; }
+
+.buttons button {
+  font-family: "Open Sans", 'sans-serif';
+  margin: 6px;
+  background-color: white;
+  outline: none;
+  border: 1px grey solid;
+  font-size: 95%; }
+
+.buttons .clicked {
+  background-color: #006699;
+  color: white;
+  border: 1px #006699 solid; }
+
+.show {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  z-index: 1;
+  transform: translate(-16px, -16px);
+  background-image: url(images/expand.png);
+  background-color: transparent;
+  background-size: 100%;
+  border: none; }
+  .show:focus {
+    outline: none; }
+
+.imgbox {
+  position: relative; }
+
+.hover .show {
+  transition: 0.5s all;
+  display: block; }
+
+.hover img {
+  transition: 0.5s all;
+  filter: brightness(30%); }
+
+.imgshow {
+  transition: 0.5s all;
+  height: 70vh;
+  width: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3; }
+
+.modal {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  transition: 0.5s all; }
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden; }
+
+.classic-show {
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1; }
+
+.animation-show {
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+  animation-fill-mode: forwards; }
+
+.animation-hide {
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-direction: reverse;
+  animation-fill-mode: forwards; }
+
+.modeli {
+  top: 0;
+  left: 0;
+  position: absolute;
+  visibility: hidden; }
+  .modeli .imgbox {
+    opacity: 0; }
+
+.suveniri {
+  top: 0;
+  left: 0;
+  position: absolute;
+  visibility: hidden; }
+  .suveniri .imgbox {
+    opacity: 0; }
