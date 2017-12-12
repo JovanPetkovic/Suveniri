@@ -17,7 +17,7 @@ div.nav-scroll {
     transition: all 0.5s;
     height: 80%;
     align-self: auto;
-    margin-top: 0; }
+    margin: 5px 0 5px 80px; }
   div.nav-scroll a {
     transition: all 0.5s;
     color: #333;
@@ -28,10 +28,10 @@ div.nav-scroll {
     div.nav-scroll a:hover {
       background-color: #333;
       color: white; }
-  div.nav-scroll button {
+  div.nav-scroll .links button {
     transition: all 0.5s;
     color: #333; }
-    div.nav-scroll button:hover {
+    div.nav-scroll .links button:hover {
       background-color: #333;
       color: white; }
 
@@ -49,10 +49,15 @@ div.nav-scroll {
   font-weight: 700;
   align-items: center;
   justify-content: space-between;
-    justify-content-margin-left: 50px; }
+  margin-top: 0; }
+  .nav .dropdown {
+    display: none; }
   .nav .links {
     margin-right: 50px;
     position: relative; }
+    .nav .links button:hover {
+      background-color: white;
+      color: #333; }
   .nav img {
     transition: all 0.5s;
     align-self: flex-start;
@@ -72,9 +77,6 @@ div.nav-scroll {
     background-color: transparent;
     border-radius: 10px;
     padding: 5px 10px; }
-    .nav button:hover {
-      background-color: white;
-      color: #333; }
   .nav a {
     transition: all 0.5s;
     border-radius: 10px;
@@ -336,3 +338,38 @@ body, html {
   visibility: hidden; }
   .suveniri .imgbox {
     opacity: 0; }
+@media (max-width: 540px) {
+  .nav {
+    height: 80px; }
+    .nav img {
+      height: 70px;
+      margin: 5px 0 5px 10px !important; }
+    .nav .links {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      right: 52px;
+      margin: 0 5px;
+      font-size: 18px; }
+      .nav .links button {
+        font-size: 18px;
+        margin: 0; }
+      .nav .links a {
+        margin: 0; }
+    .nav .dropdown {
+      position: absolute;
+      display: initial;
+      width: 32px;
+      height: 32px;
+      background-image: url(images/menu.png);
+      background-size: contain;
+      right: 10px; }
+      .nav .dropdown:focus, .nav .dropdown:active {
+        outline: none;
+        box-shadow: none; }
+    .nav .contact {
+      position: absolute;
+      left: 45vw;
+      width: 90vw; }
+    .nav .test {
+      background-image: url(images/close.png); } }

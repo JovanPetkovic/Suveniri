@@ -12,7 +12,7 @@ div.nav-scroll
         transition: all 0.5s
         height: 80%
         align-self: auto
-        margin-top: 0
+        margin: 5px 0 5px 80px
     a
         transition: all 0.5s
         color: #333
@@ -23,12 +23,13 @@ div.nav-scroll
         &:hover
             background-color: #333
             color: white
-    button
-        transition: all 0.5s
-        color: #333
-        &:hover
-            background-color: #333
-            color: white
+    .links
+        button
+            transition: all 0.5s
+            color: #333
+            &:hover
+                background-color: #333
+                color: white
 .nav
     transition: all 0.5s
     height: 100px
@@ -43,10 +44,15 @@ div.nav-scroll
     font-weight: 700
     align-items: center
     justify-content: space-between
-        margin-left: 50px
+    margin-top: 0
+    .dropdown
+        display: none
     .links
         margin-right: 50px
         position: relative
+        button:hover
+            background-color: white
+            color: #333
     img
         transition: all 0.5s
         align-self: flex-start
@@ -66,9 +72,6 @@ div.nav-scroll
         background-color: transparent
         border-radius: 10px
         padding: 5px 10px
-        &:hover
-            background-color: white
-            color: #333
     a
         transition: all 0.5s
         border-radius: 10px

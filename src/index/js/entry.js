@@ -2,6 +2,8 @@ require('../sass/main.sass');
 require('../sass//nav.sass');
 require('../sass/slider.sass');
 require('../sass/presentation.sass');
+require('../sass/mobile.sass');
 require('./main.js');
 require('./slider.js');
 require('./presentation.js');
+require('./mobile.js');
