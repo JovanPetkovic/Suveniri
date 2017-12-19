@@ -7,7 +7,6 @@ $(function(){
 	$button.on('click',function(){
 		openMenu()
 	})
-	closeMenu();
 	function closeMenu(){
 		elementShow($img);
 		elementHide($links);
